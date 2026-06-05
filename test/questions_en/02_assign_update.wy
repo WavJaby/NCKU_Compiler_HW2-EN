@@ -1,0 +1,21 @@
+NOTE  [[
+    斯篇專測並宣告與易值之法。
+    驗其連立三數、更易舊有之值，
+    以明編譯識讀之確。
+]]
+
+i have 2 num. name it [零]. called [無].                            NOTE [[ int 零, 無; ]]
+has a bool. name it [否].                                          NOTE [[ bool 否; ]]
+i have 3 num. called 1. called 3. called 5. name it [甲] called [乙] called [丙].    NOTE [[ int 甲 = 1, 乙 = 3, 丙 = 5; ]]
+i have 1 num. called [甲]. name it [丁].                            NOTE [[ int 丁 = 甲; ]]
+has a num 50. name it [大衍].                                    NOTE [[ int 大衍 = 50; ]]
+
+i have 1 num. called [甲]. print.
+i have 1 num. called [乙]. print.
+i have 1 num. called [丙]. print.
+i have 1 num. called [丁]. print.
+i have 1 num. called [大衍]. print.
+
+prev [丙] topic. set [大衍] is thus.                                NOTE [[ 丙 = 大衍; ]]
+
+i have 1 num. called [丙]. print.

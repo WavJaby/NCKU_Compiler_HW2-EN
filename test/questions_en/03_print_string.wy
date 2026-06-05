@@ -1,0 +1,43 @@
+NOTE  [[
+    斯篇綜匯型態宣告、易值及字串並聯輸出之法。
+    驗其單立與連立數、言、爻諸名，
+    考其更迭舊值，暨鎔鑄字串與變數而書之，
+    以測編譯轉譯之全功。
+]]
+
+i have 1 num. name it [甲].                                      NOTE [[ int 甲; ]]
+i have 1 num. called 1. name it [己].                                NOTE [[ int 己 = 1; ]]
+i have 2 num. called 3. called 5. name it [乙] called [丙].                  NOTE [[ int 乙 = 3, 丙 = 5; ]]
+i have 3 num. called 2. called 4. called 6. name it [辛] called [壬] called [癸].    NOTE [[ int 辛 = 2, 壬 = 4, 癸 = 6; ]]
+i have 2 num. name it [空]. called [無].                            NOTE [[ int 空, 無; ]]
+
+i have 1 str. called [[噫吁戲！]]. name it [唉呀].                NOTE [[ char* 唉呀 = "噫吁戲！"; ]]
+i have 1 bool. called false. name it [陰陽].                              NOTE [[ bool 陰陽 = false; ]]
+i have 1 any. called 1. name it [隨義].                              NOTE [[ int 隨義 = 1; ]]
+has a bool. name it [否].                                          NOTE [[ bool 否; ]]
+
+has a num 50. name it [大衍].                                    NOTE [[ int 大衍 = 50; ]]
+has a str [[問天地好在。]]. name it [文言].                    NOTE [[ char* 文言 = "問天地好在。"; ]]
+prev [丙] topic. set [大衍] is thus.                                NOTE [[ 丙 = 大衍; ]]
+i have 1 num. called [己]. name it [丁].                            NOTE [[ int 丁 = 己; ]]
+
+NOTE [[ printf("觀乎數理，甲得%d，乙得%d\n", 甲, 乙); ]]
+i have 4 str. called [[觀乎數理，甲得]]. called [甲]. called [[，乙得]]. called [乙]. print.
+
+NOTE [[ printf("『丙』今化為大衍之數：%d\n", 丙); ]]
+i have 2 str. called [[『丙』今化為大衍之數：]]. called [丙]. print.
+
+NOTE [[ printf("陰陽之相乃%d\n", 陰陽); ]]
+i have 2 str. called [[陰陽之相乃]]. called [陰陽]. print.
+
+NOTE [[ printf("有言曰：%s%s\n", 文言, 唉呀); ]]
+i have 3 str. called [[有言曰：]]. called [文言]. called [唉呀]. print.
+
+NOTE [[ printf("辛%d，壬%d，癸%d\n", 辛, 壬, 癸); ]]
+i have 6 str. called [[辛]]. called [辛]. called [[，壬]]. called [壬]. called [[，癸]]. called [癸]. print.
+
+NOTE [[ printf("丁之值為：%d\n", 丁); ]]
+i have 2 str. called [[丁之值為：]]. called [丁]. print.
+
+NOTE [[ printf("隨義之值為：%d\n", 隨義); ]]
+i have 2 str. called [[隨義之值為：]]. called [隨義]. print.

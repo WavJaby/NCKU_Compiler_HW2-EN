@@ -1,0 +1,36 @@
+NOTE  [[
+    斯篇專演「詩算」之趣。
+    借宋代邵雍《山村詠懷》之數字詩，
+    將一至十之數，融於風物之中。
+    以驗加減與變數易易之法，觀編譯器點算天地之功也。
+]]
+
+i have 1 str. called [[老夫今日不卜卦，且出城踏青，算算這山間野趣。]]. print.
+
+i have 1 str. called [[一去二三里，煙村四五家。]]. print.
+
+has a num 2. name it [去路].
+add 3 <- [去路]. prev [去路] topic. set its is thus.
+
+has a num 4. name it [人家].
+add 5 <- [人家]. prev [人家] topic. set its is thus.
+
+i have 5 str. called [[信步走來，行了]]. called [去路]. called [[里路，遇見幾戶人家？想來是]]. called [人家]. called [[戶矣。]]. print.
+
+i have 1 str. called [[亭臺六七座，八九十枝花。]]. print.
+
+has a num 6. name it [亭臺].
+add 7 <- [亭臺]. prev [亭臺] topic. set its is thus.
+
+has a num 8. name it [繁花].
+add 9 <- [繁花]. prev [繁花] topic. set its is thus.
+add 10 <- [繁花]. prev [繁花] topic. set its is thus.
+
+i have 3 str. called [[歇腳之處，竟有]]. called [亭臺]. called [[座之多。]]. print.
+i have 3 str. called [[路邊繁花更盛，總計]]. called [繁花]. called [[枝！]]. print.
+
+NOTE  [[ 算盡萬物，驗證連加 ]]
+add [去路] <- [人家]. add [亭臺] <- its. add [繁花] <- its. name it [萬物].
+
+i have 4 str. called [[老夫掐指一總，路、村、亭、花，此行共覽風物]]. called [萬物]. called [[件。]].
+    called [[想當然耳，風雅竟能稱斤論兩，妙極妙極！]]. print.

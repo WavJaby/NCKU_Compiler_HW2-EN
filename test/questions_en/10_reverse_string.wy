@@ -1,0 +1,28 @@
+NOTE  [[
+    斯篇專考「字串加法」與「字串取值」之機。
+    以迴文倒敘之法，將字串逐字反轉，
+    以驗編譯器於字串疊加、易值及迴圈之全功也。
+]]
+
+i have 1 str. called [[客上天然居]]. name it [正讀].
+has a num 5. name it [長度].
+
+NOTE [[立空言以俟疊加]]
+i have 1 str. name it [倒讀].
+
+has a num 0. name it [甲].
+while true. if [甲] == [長度] topic break end.
+
+    NOTE [[溯洄求索：長度減甲]]
+    sub [長度] -> [甲]. name it [索引].
+
+    those [正讀] of [索引]. name it [單字].
+
+    NOTE [[取其單字，累入倒讀]]
+    add [倒讀] -> [單字]. prev [倒讀] topic. set its is thus.
+
+    add 1 -> [甲]. prev [甲] topic. set its is thus.
+end.
+
+i have 2 str. called [[正向觀之：]]. called [正讀]. print.
+i have 2 str. called [[倒向讀之：]]. called [倒讀]. print.

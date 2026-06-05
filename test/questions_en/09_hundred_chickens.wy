@@ -1,0 +1,47 @@
+NOTE  [[
+    斯篇專演「循環」與「明斷」之妙用。
+    借《張丘建算經》之「百錢買百雞」題，
+    以驗多重迴圈、算術運算，並以多言列印之功也。
+]]
+
+i have 1 str. called [[今有雞翁一，值錢五；雞母一，值錢三；雞雛三，值錢一。]]. print.
+i have 1 str. called [[凡百錢買雞百隻，問雞翁、母、雛各幾何？]]. print.
+
+has a num 100. name it [百].
+has a num 0. name it [翁].
+
+NOTE [[ 第一層迴圈：翁至多二十隻 ]]
+while true. if [翁] > 20 topic break end.
+
+    has a num 0. name it [母].
+    NOTE [[ 第二層迴圈：母至多三十三隻 ]]
+    while true. if [母] > 33 topic break end.
+
+        NOTE [[ 雛 = 百 - 翁 - 母 ]]
+        sub [百] -> [翁]. sub its -> [母]. name it [雛].
+
+        NOTE [[ 驗證 雛 是否為三之倍數 (雛 % 3 == 0) ]]
+        div [雛] -> 3. mod. name it [雛餘].
+
+        if [雛餘] == 0 topic.
+            NOTE [[ 總價 = 翁*5 + 母*3 + 雛/3 ]]
+            mul [翁] -> 5. name it [翁價].
+            mul [母] -> 3. name it [母價].
+            div [雛] -> 3. name it [雛價].
+
+            add [翁價] -> [母價]. add its -> [雛價]. name it [總價].
+
+            if [總價] == [百] topic.
+                NOTE [[ 採直接交錯列印文字與變數 ]]
+                i have 7 str. called [[得解：翁]]. called [翁].
+                    called [[隻，母]]. called [母].
+                    called [[隻，雛]]. called [雛].
+                    called [[隻。]]. print.
+            end.
+        end.
+
+        add [母] -> 1. prev [母] topic. set its is thus.
+    end.
+
+    add [翁] -> 1. prev [翁] topic. set its is thus.
+end.

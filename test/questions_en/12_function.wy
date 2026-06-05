@@ -1,0 +1,31 @@
+NOTE  [[
+    斯篇專演「方術」之奧。
+    借泰西算學牛頓之法，以漸近求精，
+    推求平冪之源（根號二），以驗編譯器「術（函式）」之宣告與施作也。
+]]
+
+i have 1 func. name it [牛頓求根法]. to perform. requires 1 num. called [試]. func begin.
+    NOTE [[ 設甲為初限，啟算之基 ]]
+    has a num 1. name it [甲].
+    has a num 1. name it [乙].
+    for [試] times.
+        NOTE [[ 求其差謬：乙 = 甲平冪減二 ]]
+        mul [甲] <- [甲]. sub its -> 2. prev [乙] topic set its is thus.
+        NOTE [[ 求其變率：丙 = 甲倍之 ]]
+        mul 2 <- [甲]. name it [丙].
+        NOTE [[ 茂 = 乙除以丙 ]]
+        div [乙] -> [丙]. name it [茂].
+        NOTE [[ 依法損益：甲 = 甲減茂，以逼真值 ]]
+        sub [甲] -> [茂]. prev [甲] topic. set its is thus.
+    end.
+    return [甲].
+func end for [牛頓求根法] func end.
+
+NOTE [[ 施術驗算，迭演愈多，其數愈微，窮理盡性 ]]
+call [牛頓求根法] <- 2. print.
+call [牛頓求根法] <- 3. print.
+call [牛頓求根法] <- 5. print.
+call [牛頓求根法] <- 7. print.
+call [牛頓求根法] <- 13. print.
+call [牛頓求根法] <- 131. print.
+call [牛頓求根法] <- 1013. print.

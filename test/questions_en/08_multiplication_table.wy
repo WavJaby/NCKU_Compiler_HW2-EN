@@ -1,0 +1,21 @@
+NOTE  [[
+    斯篇專演「九九乘法」之理。
+    考《管子》、《算數書》皆載九九之術，乃算家之樞紐。
+    茲以雙重迴圈與明斷之法，羅列乘算口訣，以驗編譯器之全功。
+]]
+
+NOTE [[ 甲為乘數，肇始於一，至九乃極 ]]
+has a num 1 name it [甲].
+while true. if [甲] >= 10 topic break end.
+    NOTE [[ 乙為被乘數，亦自一始，隨甲流轉 ]]
+    has a num 1 name it [乙].
+    while true. if [乙] >= 10 topic break end.
+        NOTE [[ 步其積：果 = 甲乘乙 ]]
+        mul [甲] -> [乙] name it [果].
+        NOTE [[ 觀其積：若滿十，逕直書之；若不及十，加『得』字以齊句讀 ]]
+        if [果] >= 10 topic i have 3 str. called [甲] called [乙] called [果] print.
+        else i have 4 str. called [甲] called [乙] called [[得]] called [果] print end.
+        add [乙] -> 1. prev [乙] topic set its is thus.
+    end.
+    add [甲] -> 1. prev [甲] topic set its is thus.
+end.

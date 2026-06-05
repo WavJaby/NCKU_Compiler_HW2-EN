@@ -1,0 +1,44 @@
+NOTE  [[
+    斯篇專作「九章算術」算理之驗證。
+    考其加減乘除、所餘幾何之法，
+    以驗編譯器於算術運算、變數易值之全功。
+]]
+
+i have 2 num. called 10. called 3. name it [甲] called [乙].
+
+i have 2 str. called [[今有甲數為]]. called [甲]. print.
+i have 2 str. called [[又有乙數為]]. called [乙]. print.
+
+add [甲] <- [乙]. name it [和].                                 NOTE [[ 和 = 乙 + 甲  ]]
+i have 2 str. called [[甲乙相并，厥和乃為]]. called [和]. print.
+
+sub [甲] -> [乙]. name it [差].                                 NOTE [[ 差 = 甲 - 乙  ]]
+i have 2 str. called [[以乙損甲，其差為]]. called [差]. print.
+
+sub [甲] <- [乙]. name it [反差].                               NOTE [[ 反差 = 乙 - 甲 ]]
+i have 2 str. called [[以甲損乙，反得其差為]]. called [反差]. print.     
+
+mul [甲] -> [乙]. name it [積].                                 NOTE [[ 積 = 甲 x 乙 ]]
+i have 2 str. called [[甲乙相乘，步其積為]]. called [積]. print.
+
+div [甲] -> [乙]. name it [商].                                 NOTE [[ 商 = 甲 ÷ 乙 ]]
+div [甲] -> [乙]. mod. name it [餘].                       NOTE [[ 餘 = 甲 % 乙 ]]
+i have 4 str. called [[以乙除甲，得商]]. called [商]. called [[，不盡者為]]. called [餘]. print.
+
+add [甲] <- 1. prev [甲] topic. set its is thus.                           NOTE [[ 甲 = 1 + 甲 ]]
+i have 2 str. called [[甲益一算，厥數乃為]]. called [甲]. print.
+
+sub [乙] -> 1. prev [乙] topic. set its is thus.                           NOTE [[ 乙 = 乙 - 1 ]]
+i have 2 str. called [[乙損一籌，其數化為]]. called [乙]. print.
+
+NOTE [[連加運算與「其」之驗證]]
+add [甲] <- [乙]. name it [丁].                                 NOTE [[ 丁 = 乙 + 甲 (11 + 2 = 13) ]]
+add [丁] <- 10. name it [戊].                                     NOTE [[ 戊 = 10 + 丁 (10 + 13 = 23) ]]
+add [甲] <- [乙]. add its <- 10. name it [己].                       NOTE [[ 己 = 10 + (乙 + 甲) (10 + 13 = 23) ]]
+i have 6 str. called [[今以甲數]]. called [甲].
+    called [[，并乙復益十，步之得]]. called [己].
+    called [[，與戊同揆，皆為]]. called [戊]. print.
+
+NOTE [[一算訖即書之（算畢隨錄）]]
+i have 2 str. called [[并甲於乙，其數為]]. called add [甲] <- [乙]. print.    NOTE [[ printf("并甲於乙，其數為 %d\n", 乙 + 甲) ]]
+i have 2 str. called [[乘甲以乙，其積為]]. called mul [甲] -> [乙]. print.    NOTE [[ printf("乘甲以乙，其積為 %d\n", 甲 * 乙) ]]

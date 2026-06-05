@@ -1,0 +1,47 @@
+NOTE  [[
+    斯篇專試「明斷」之機巧。
+    借賈島《尋隱者不遇》之尋訪層次，
+    以驗「若」、「或若」、「若非」之連鎖，
+    並辨「雲」、「霧」迷障之理，
+    以觀編譯器決斷吉凶、尋芳探幽之趣也。
+]]
+
+i have 1 str. called [[松下問童子，欲尋隱者蹤。]]. print.
+
+has a num 3. name it [尋訪線索].
+
+NOTE  [[ 驗證 若 與 若非 之嵌套 ]]
+if [尋訪線索] > 2 topic.
+    has a str [[想當然耳！線索俱全，必能尋得隱者。]] print.
+else.
+    has a str [[怪哉！深山逢童子，竟問不出隻言片語？]] print.
+end.
+
+NOTE  [[ 驗證 或若 之連鎖 ]]
+if [尋訪線索] == 1 topic.
+    has a str [[童子答曰：『言師採藥去。』]] print.
+else if [尋訪線索] == 2 topic.
+    has a str [[童子指山曰：『只在此山中。』]] print.
+else if [尋訪線索] == 3 topic.
+    has a str [[童子搖頭曰：『雲深不知處。』]] print.
+else.
+    has a str [[奇了，童子竟言他物！]] print.
+end.
+
+NOTE  [[ 驗證 邏輯運算 (AND/OR) 觀山中雲霧 ]]
+i have 2 bool. called true. called false. name it [雲] called [霧].
+
+NOTE  [[ 陽為有，陰為無 ]]
+if  those [雲] [霧] partially true  topic.
+    has a str [[妙哉，山中尚存一絲雲霧，仙氣縹緲！]] print.
+end.
+
+if  those [雲] [霧] are true  topic.
+    has a str [[善哉，雲霧皆備，此乃神仙洞府之境！]] print.
+end.
+
+NOTE  [[ 驗證 且 與 且非 之類，當察其爻值易位 ]]
+prev [霧] topic. set [雲] is thus.
+if  those [雲] [霧] are true  topic.
+    has a str [[大善！雲遮霧掩，今皆化作漫天純白，真乃『雲深不知處』矣！]] print.
+end.

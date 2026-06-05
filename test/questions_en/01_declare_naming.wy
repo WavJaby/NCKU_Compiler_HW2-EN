@@ -1,0 +1,21 @@
+NOTE  [[
+    斯篇專作變數立名與賦值之驗證。
+    考其立數、紀言、定陰陽之法，
+    以驗編譯器轉譯之效。
+]]
+
+
+i have 1 num. called 1. name it [甲].                 NOTE [[ int 甲 = 1; ]]
+i have 1 str. called [[噫吁戲]]. name it [唉呀].   NOTE [[ char* 唉呀 = "噫吁戲"; ]]
+i have 1 bool. called false. name it [陰陽].               NOTE [[ bool 陰陽 = false; ]]
+i have 1 any. called 1. name it [隨義].               NOTE [[ int 隨義 = 1]]
+
+has a num 50. name it [大衍].                     NOTE [[ int 大衍 = 50; ]]
+has a str [[問天地好在。]]. name it [文言].     NOTE [[ char* 文言 = "問天地好在。"; ]]
+
+i have 1 num. called [甲]. print.
+i have 1 str. called [唉呀]. print.
+i have 1 bool. called [陰陽]. print.
+i have 1 num. called [隨義]. print.
+i have 1 num. called [大衍]. print.
+i have 1 str. called [文言]. print.

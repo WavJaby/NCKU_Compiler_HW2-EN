@@ -1,0 +1,29 @@
+NOTE [[割圓術始載於劉徽所著九章算術注]]
+
+i have 1 num. called 1. name it [半徑].
+mul [半徑] -> [半徑]. name it [半徑平方].
+
+i have 1 func. name it [求小弦]. to perform. requires 2 num. called [裏觚之面]. called [輪數]. func begin.
+	div [裏觚之面] -> 2. name it [半面].
+	if [輪數] < 1 topic. return [裏觚之面] end.
+	mul [半面] -> [半面]. name it [半面平方].
+	sub [半徑平方] -> [半面平方]. take 1 -> call [平方根]. name it [股].
+	sub [半徑] -> [股]. name it [小句].
+	mul [小句] -> [小句]. add its -> [半面平方]. take 1 -> call [平方根]. name it [小弦].
+	i have 2 num. called [小弦]. called sub [輪數] -> 1. take 2 -> call [求小弦]. return end.
+func end for [求小弦] func end.
+
+NOTE [[輪數始於一]]
+i have 1 func. name it [割圓術求圓率]. to perform. requires 1 num called [原輪數]. func begin.
+	sub [原輪數] -> 1. name it [輪數].
+	call [冪] <- 2 <- [輪數]. mul its -> 6. name it [觚數].
+	call [求小弦] <- [半徑] <- [輪數]. name it [小弦].
+	mul [小弦] -> [觚數]. name it [觚周].
+	div [觚周] -> 2. mul its -> [半徑]. name it [觚冪].
+	div [觚冪] -> [半徑平方]. name it [圓率].
+	i have 3 str. called [[割圓]]. called [觚數]. called [[觚。所得圓率者。]]. print.
+	i have 2 str. called [圓率]. called [[也。]]. print.
+	return [圓率].
+func end for [割圓術求圓率] func end.
+
+call [割圓術求圓率] <- 10.

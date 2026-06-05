@@ -1,0 +1,51 @@
+i have 1 func. name it [曼德博]. to perform. requires 2 num. called [寬]. called [高]. func begin.
+    NOTE. [[曼德博集。亦稱曼德布洛特复数集合。复平面上组成分形之点之集合也。]]
+
+    i have 1 str. called [[丁龘蠹臺龜畫龍淼蔑高五三二]]. name it [皴法].
+    NOTE. [[皴法者。圖畫之法也]].
+
+    sub 0 -> 1. name it [上]. add 0 -> 1. name it [下].
+    sub 0 -> 2. name it [左]. add 0 -> 2. name it [右].
+
+    sub [右] -> [左]. div its -> [寬]. name it [橫步].
+    sub [下] -> [上]. div its -> [高]. name it [縱步].
+
+    has a num 0. name it [戊]. while true. if [戊] == [高] topic break end.
+
+        mul [縱步] -> [戊]. add its -> [上]. name it [虛].
+
+        i have 1 str. name it [行].
+
+        has a num 0. name it [戌]. while true. if [戌] == [寬] topic break end.
+
+            mul [橫步] -> [戌]. add its -> [左]. name it [實].
+
+            those [虛]. name it [虛虛].
+            those [實]. name it [實實].
+
+            NOTE. [[凡每一像素。皆算令其收斂之最大疊代數]].
+
+            has a num 0. name it [己]. while true. if [己] == 12 topic break end.
+
+                i have 2 num. called mul [實實] -> [實實]. called mul [虛虛] -> [虛虛]. name it [甲]. called [乙].
+                add [甲] -> [乙]. name it [丙].
+                if [丙] > 4 topic break end.
+
+                mul [虛虛] -> [實實]. mul its -> 2. add its -> [虛]. prev [虛虛] topic. set its is thus.
+                sub [甲] -> [乙]. add its -> [實]. prev [實實] topic. set its is thus.
+
+            add 1 -> [己]. prev [己] topic. set its is thus end.
+
+            NOTE. [[既得疊代數。乃以皴法圖之]].
+
+            sub 13 -> [己]. name it [巳].
+            those [皴法] of [巳]. name it [墨].
+            add [行] -> [墨]. prev [行] topic. set its is thus.
+
+        add 1 -> [戌]. prev [戌] topic. set its is thus end.
+
+        i have 1 str. called [行]. print.
+    add 1 -> [戊]. prev [戊] topic. set its is thus end.
+func end for [曼德博] func end.
+
+call [曼德博] <- 59. <- 24.

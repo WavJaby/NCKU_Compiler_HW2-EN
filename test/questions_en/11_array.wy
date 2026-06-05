@@ -1,0 +1,40 @@
+NOTE  [[
+    斯篇專試陣列「充」、「之長」與「迴圈取值」之機巧。
+    不涉拼接、陣列易值、其一、其餘與凡字走訪，
+    以驗編譯器列法與索引之基石也。
+]]
+
+i have 1 list. name it [五音].
+push [五音] -> [[宮]]. -> [[商]]. -> [[角]]. -> [[徵]]. -> [[羽]].
+
+i have 1 list. name it [四象].
+push [四象] -> [[青龍]]. -> [[白虎]]. -> [[朱雀]]. -> [[玄武]].
+
+i have 1 list. name it [天地萬象].
+push [天地萬象] -> [五音]. -> [四象].
+
+i have 1 str. called [[五音之長，計有：]]. print.
+those [五音] length. print.
+
+i have 1 str. called [[四象之長，計有：]]. print.
+those [四象] length. print.
+
+i have 1 str. called [[天地萬象之長（內含幾列），計有：]]. print.
+those [天地萬象] length. print.
+
+NOTE  [[ 測試以恆為是迴圈與索引逐一取出陣列內容 ]]
+i have 1 str. called [[以迴圈逐一取五音列中之物：]]. print.
+
+has a num 1. name it [甲].
+while true. if [甲] > [五音] length topic. break end.
+    those [五音] of [甲]. print.
+    add [甲] -> 1. prev [甲] topic. set its is thus.
+end.
+
+i have 1 str. called [[以迴圈逐一取四象列中之物：]]. print.
+
+has a num 1. name it [乙].
+while true. if [乙] > [四象] length topic. break end.
+    those [四象] of [乙]. print.
+    add [乙] -> 1. prev [乙] topic. set its is thus.
+end.
