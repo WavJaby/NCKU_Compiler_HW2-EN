@@ -50,19 +50,19 @@ git submodule update --init
 
 ### Windows (MSYS2)
 
-MSYS2 was installed in the previous assignment. Open an **MSYS2 MinGW64** terminal and run:
+MSYS2 was installed in the previous assignment. Open an **MSYS2 UCRT64** terminal and run:
 
 ```bash
 # Install required tools (skip if already installed)
-pacman -S mingw-w64-x86_64-cmake mingw-w64-x86_64-flex \
-          mingw-w64-x86_64-bison mingw-w64-x86_64-gcc mingw-w64-x86_64-llvm
+pacman -S bison flex mingw-w64-ucrt-x86_64-cmake \
+          mingw-w64-ucrt-x86_64-gcc mingw-w64-ucrt-x86_64-llvm
 
 # Build
 cmake -B build -S . -G "MinGW Makefiles"
 cmake --build build
 ```
 
-> Use the **MinGW64** terminal, not the MSYS terminal — the toolchain paths are incompatible.
+> Use the **UCRT64** terminal, not the MSYS terminal — the toolchain paths are incompatible.
 
 ### Linux (Ubuntu / Debian)
 

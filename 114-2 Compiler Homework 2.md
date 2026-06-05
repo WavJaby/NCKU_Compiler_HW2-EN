@@ -1,6 +1,6 @@
 # 114-2 Compiler Homework 2
 
-::: spoiler Message from the compiler TA:
+<details><summary>Message from the compiler TA:</summary>
 
 This semester was originally planned to have three assignments. The third one I had wanted to be a fun GPU-acceleration project using MLIR for matrix operations ~~(so you'd have a cool project to talk about in interviews)~~. Unfortunately, I didn't have time to finish it (I originally planned to release assignments 2 and 3 together since they're connected). Then midterms hit and things got really busy, and combined with my chronic procrastination (I think it's actually that I set the bar too high for code quality 🤥), the assignment that should have been out two weeks ago still isn't done because I haven't fully figured out MLIR yet.
 
@@ -18,7 +18,7 @@ We're still doing things the old-fashioned way: all the source code in this assi
 
 At the end of the semester I'll open-source everything. Contributions are very welcome if you're interested.
 
-:::
+</details>
 
 > International students who need English test results can obtain them from me (Email: F74114760@gs.ncku.edu.tw, or Moodle message).
 
@@ -30,7 +30,7 @@ YACC is a tool that accepts a CFG (Context-Free Grammar) and automatically gener
 
 ### How YACC Works
 
-YACC uses the ==**LALR(1)**== parsing algorithm, using **Shift** and **Reduce** operations to check whether a sequence of input tokens conforms to the defined grammar.
+YACC uses the **LALR(1)** parsing algorithm, using **Shift** and **Reduce** operations to check whether a sequence of input tokens conforms to the defined grammar.
 
 ---
 
@@ -81,7 +81,7 @@ YACC allows each grammar symbol to carry a "value." These values are accessed wi
 
 | Symbol | Meaning |
 |--------|---------|
-| `$$` | The value of the ==**current rule's left-hand side**== (non-terminal) — the "output value" of this rule |
+| `$$` | The value of the **current rule's left-hand side** (non-terminal) — the "output value" of this rule |
 | `$1` | The value of the **1st** symbol on the right-hand side |
 | `$2` | The value of the **2nd** symbol on the right-hand side |
 | `$3` | The value of the **3rd** symbol on the right-hand side |
@@ -363,11 +363,10 @@ void yyerror(const char *s) {
 
 ## Assignment Description
 
-:::info
-**Source code / assignment skeleton**: [github.com/WavJaby/NCKU_Compiler_HW2](https://github.com/WavJaby/NCKU_Compiler_HW2)
-Environment setup and detailed documentation (function signatures, step-by-step TODO hints, utility function reference) are in [README.md](https://github.com/WavJaby/NCKU_Compiler_HW2/blob/master/README.md)
-Not sure where to start? Begin with [Quick Start — First Statement](https://github.com/WavJaby/NCKU_Compiler_HW2/blob/master/README.md#quick-start--first-statement)
-:::
+> [!NOTE]
+> **Source code / assignment skeleton**: [github.com/WavJaby/NCKU_Compiler_HW2](https://github.com/WavJaby/NCKU_Compiler_HW2)
+> Environment setup and detailed documentation (function signatures, step-by-step TODO hints, utility function reference) are in [README.md](https://github.com/WavJaby/NCKU_Compiler_HW2/blob/master/README.md)
+> Not sure where to start? Begin with [Quick Start — First Statement](https://github.com/WavJaby/NCKU_Compiler_HW2/blob/master/README.md#quick-start--first-statement)
 
 Don't be intimidated by the length of the assignment description and the number of TODOs. All these documents were organized with Claude as a collaborator, working from the source code, so they contain everything you need to complete the assignment. I've read through all of them as well — theoretically this is everything. If anything is missing, please let me know.
 
@@ -386,19 +385,16 @@ Don't be intimidated by the length of the assignment description and the number 
 - **Part 1 (Verbose)**: `wy -v` verbose log output (stdout/stderr) must match the expected output; does not require the program to be executable (`.ll` files are not graded)
 - **Part 2 (Runtime)**: the program must compile and execute, and the standard output must match the expected output
 
-:::success
-Use `-f <test-name>` to run a single test
+> [!TIP]
+> Use `-f <test-name>` to run a single test
+>
+> **Local grading**: `./test/test.sh`
+> **Server grading**: `submit_test_hw2`
 
-**Local grading**: `./test/test.sh`
-**Server grading**: `submit_test_hw2`
-:::
-
-
-:::warning
-Final score = min(server score, 100)
-This assignment counts for a maximum of 100 points, worth 25% of the semester grade (100 × 25% = 25 points).
-Note: after submission, the actual grading run will substitute different variable values. For example, the test file `01_開物_定名.wy` contains `吾有一爻。曰陰。名之曰「陰陽」。` — the grader may change it to `吾有一爻。曰陽。名之曰「陰陽」。`. The `submit_test_hw2` command does not change variable values; be aware of this.
-:::
+> [!WARNING]
+> Final score = min(server score, 100)
+> This assignment counts for a maximum of 100 points, worth 25% of the semester grade (100 × 25% = 25 points).
+> Note: after submission, the actual grading run will substitute different variable values. For example, the test file `01_開物_定名.wy` contains `吾有一爻。曰陰。名之曰「陰陽」。` — the grader may change it to `吾有一爻。曰陽。名之曰「陰陽」。`. The `submit_test_hw2` command does not change variable values; be aware of this.
 
 ---
 
@@ -420,15 +416,14 @@ A local IDE (CLion / VS Code) offers the following advantages:
 | Report semantic errors | [`yyerrorf(fmt, ...)` / `yyerrorlf(fmt, loc, ...)`](https://github.com/WavJaby/NCKU_Compiler_HW2/blob/master/README.md#error-reporting) | Prints offending line number + source block; much faster to locate than printf; **delete when done debugging** |
 | Crash location | IDE / GDB, `cmake -DCMAKE_BUILD_TYPE=Debug` | — |
 
-:::danger
-**Delete all extra log calls after debugging**: Part 1 compares the full verbose log — even one extra `compilerLog` or `printf` call will cause a ==Part 1 test FAIL==.
-:::
+> [!CAUTION]
+> **Delete all extra log calls after debugging**: Part 1 compares the full verbose log — even one extra `compilerLog` or `printf` call will cause a **Part 1 test FAIL**.
 
 ---
 
 ## Four-Week Schedule
 
-::: spoiler Week 1: Environment Setup & Single-Value Variables (7–9h)
+<details><summary>Week 1: Environment Setup & Single-Value Variables (7–9h)</summary>
 
 **Goal**: Declare single-type variables (number/string/boolean) and print them
 
@@ -444,9 +439,9 @@ A local IDE (CLion / VS Code) offers the following advantages:
 | `code_createVariable` | Switch to `object_nameLiteralOrLoadReg`; support symbol references and non-numeric types |
 | `code_stdoutPrintObject` | Add `@printf` calls for I32 / I64 / F64 / STR |
 
-:::
+</details>
 
-::: spoiler Week 2: Multi-value Declarations & Assignment & Expressions (10–13h)
+<details><summary>Week 2: Multi-value Declarations & Assignment & Expressions (10–13h)</summary>
 
 **Goal**: Multi-value declarations, assignments, and arithmetic/logic expressions
 
@@ -460,9 +455,9 @@ A local IDE (CLion / VS Code) offers the following advantages:
 | `code_expression` | Register allocation, type promotion, IR instruction output |
 | `object_nameLiteralOrLoadReg` REGISTER branch | Chain expression pass-through |
 
-:::
+</details>
 
-::: spoiler Week 3: Control Flow & Arrays (11–18h)
+<details><summary>Week 3: Control Flow & Arrays (11–18h)</summary>
 
 **Goal**: if / for / while control flow; array operations
 
@@ -477,9 +472,9 @@ A local IDE (CLion / VS Code) offers the following advantages:
 | Array index access | `夫「X」之「N」` → call the provided `object_getIndex` |
 | `code_getLength` | Get string/array length; call runtime functions |
 
-:::
+</details>
 
-::: spoiler Week 4: Functions & Final Tests (9–12h)
+<details><summary>Week 4: Functions & Final Tests (9–12h)</summary>
 
 **Goal**: Define and call custom functions; pass comprehensive tests
 
@@ -491,7 +486,7 @@ A local IDE (CLion / VS Code) offers the following advantages:
 | `FunctionCallArgsStmt` | Argument passing for function calls |
 | Integration tests | Circle area (割圓術), Mandelbrot set (曼德博集), Newton's method (牛頓求根法) |
 
-:::
+</details>
 
 
 ### Fill-in Function Overview
@@ -523,9 +518,9 @@ For-loop phi nodes, if/else basic block structure, and all `buffPrintln` usage p
 ## Submission Instructions (Read Carefully)
 
 To provide a consistent testing and grading environment, we have a server (Ubuntu 20.04) available for testing. Since this server is shared with other lab work, please use it responsibly.
-:::danger
-Any attempt to disrupt or overload the system will result in immediate account suspension.
-:::
+
+> [!CAUTION]
+> Any attempt to disrupt or overload the system will result in immediate account suspension.
 
 
 
@@ -570,18 +565,15 @@ mkdir -p ~/HW2
 
 Place the `NCKU_Compiler_HW2` folder inside `HW2` to submit.
 
-:::warning
-Recommended: create the `HW2` directory first, then `git clone` the assignment template inside it, and edit files directly there.
-:::
+> [!TIP]
+> Recommended: create the `HW2` directory first, then `git clone` the assignment template inside it, and edit files directly there.
 
 The Moodle submission area is for backup only — grading is based on the server. If you want a backup, compress your assignment as a `.zip` file.
 
-:::warning
-**Leave time before the deadline**: The server environment may differ from your local machine (compiler versions, etc.). Test and fix on the server **at least one day** before the deadline to avoid last-minute surprises or long queues. Don't leave it to the last minute ヾ(•ω•`)o
-:::
+> [!WARNING]
+> **Leave time before the deadline**: The server environment may differ from your local machine (compiler versions, etc.). Test and fix on the server **at least one day** before the deadline to avoid last-minute surprises or long queues. Don't leave it to the last minute ヾ(•ω•`)o
 
-:::warning
-**Do not modify `CMakeLists.txt` (root) or `test/test.sh`**: These files are part of the grading environment. Modifying them may cause the server to fail to build or score correctly.
-- To add new `.c` source files or a library → modify `src/CMakeLists.txt`
-- To add a custom test script → create a new `.sh` file; do not touch the original `test/test.sh`
-:::
+> [!WARNING]
+> **Do not modify `CMakeLists.txt` (root) or `test/test.sh`**: These files are part of the grading environment. Modifying them may cause the server to fail to build or score correctly.
+> - To add new `.c` source files or a library → modify `src/CMakeLists.txt`
+> - To add a custom test script → create a new `.sh` file; do not touch the original `test/test.sh`
