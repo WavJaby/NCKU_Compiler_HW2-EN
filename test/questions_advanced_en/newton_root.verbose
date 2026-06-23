@@ -1,0 +1,47 @@
+test/questions_advanced_en/newton_root.wy:1:2     |> (scope id: 0, type: SCOPE_MAIN)
+test/questions_advanced_en/newton_root.wy:1:24    |    > (function define: 牛頓求根法)
+test/questions_advanced_en/newton_root.wy:1:24    |> (scope id: 0, type: SCOPE_FUNCTION)
+test/questions_advanced_en/newton_root.wy:1:68    |    > (function param: 試, type: num)
+test/questions_advanced_en/newton_root.wy:1:73    |    > (function start body)
+test/questions_advanced_en/newton_root.wy:3:28    |    var 「甲」 <- 1.0
+test/questions_advanced_en/newton_root.wy:4:28    |    var 「乙」 <- 1.0
+test/questions_advanced_en/newton_root.wy:5:13    |    > (for loop, count: 「試」)
+test/questions_advanced_en/newton_root.wy:5:13    |    > (scope id: 1, type: SCOPE_FOR_LOOP)
+test/questions_advanced_en/newton_root.wy:7:25    |        exp 「甲」 * 「甲」 -> reg<f64>
+test/questions_advanced_en/newton_root.wy:7:39    |        exp reg<f64> - 2 -> reg<f64>
+test/questions_advanced_en/newton_root.wy:7:44    |        set 「乙」 <- reg<f64>
+test/questions_advanced_en/newton_root.wy:9:23    |        exp 「甲」 * 2 -> reg<f64>
+test/questions_advanced_en/newton_root.wy:9:31    |        var 「丙」 <- reg<f64>
+test/questions_advanced_en/newton_root.wy:11:25   |        exp 「乙」 / 「丙」 -> reg<f64>
+test/questions_advanced_en/newton_root.wy:11:33   |        var 「茂」 <- reg<f64>
+test/questions_advanced_en/newton_root.wy:13:25   |        exp 「甲」 - 「茂」 -> reg<f64>
+test/questions_advanced_en/newton_root.wy:13:30   |        set 「甲」 <- reg<f64>
+test/questions_advanced_en/newton_root.wy:14:5    |    < (scope id: 1, type: SCOPE_FOR_LOOP)
+╔══════╦══════╦═══════╦══════╗
+║ Name ║ Type ║ Index ║ Func ║
+╠══════╬══════╬═══════╬══════╣
+║ 丙   ║ f64  ║ 3     ║      ║
+║ 茂   ║ f64  ║ 4     ║      ║
+╚══════╩══════╩═══════╩══════╝
+test/questions_advanced_en/newton_root.wy:14:5    |    < (for loop end)
+test/questions_advanced_en/newton_root.wy:16:1    |    return 「甲」
+test/questions_advanced_en/newton_root.wy:16:22   |    < (function end: 牛頓求根法)
+test/questions_advanced_en/newton_root.wy:16:22   |< (scope id: 0, type: SCOPE_FUNCTION)
+╔══════╦══════╦═══════╦══════╗
+║ Name ║ Type ║ Index ║ Func ║
+╠══════╬══════╬═══════╬══════╣
+║ 試   ║ i32  ║ 0     ║      ║
+║ 甲   ║ f64  ║ 1     ║      ║
+║ 乙   ║ f64  ║ 2     ║      ║
+╚══════╩══════╩═══════╩══════╝
+test/questions_advanced_en/newton_root.wy:18:23   |    call 牛頓求根法(1 args) -> reg<f64>
+test/questions_advanced_en/newton_root.wy:18:23   |    PRINT: reg<f64>
+test/questions_advanced_en/newton_root.wy:18:28   |< (scope id: 0, type: SCOPE_MAIN)
+╔════════════╦══════╦═══════╦═════════╗
+║ Name       ║ Type ║ Index ║ Func    ║
+╠════════════╬══════╬═══════╬═════════╣
+║ 冪         ║ func ║ -1    ║ builtin ║
+║ 平方根     ║ func ║ -1    ║ builtin ║
+║ 牛頓求根法 ║ func ║ 0     ║ ctx:1   ║
+╚════════════╩══════╩═══════╩═════════╝
+test/questions_advanced_en/newton_root.wy:18:28   |total 18 lines

@@ -1,0 +1,77 @@
+test/questions_en/04_arithmetic.wy:1:2     |> (scope id: 0, type: SCOPE_MAIN)
+test/questions_en/04_arithmetic.wy:7:44    |    var 「甲」 <- 10
+test/questions_en/04_arithmetic.wy:7:55    |    var 「乙」 <- 3
+test/questions_en/04_arithmetic.wy:9:45    |    PRINT: "今有甲數為"
+test/questions_en/04_arithmetic.wy:9:45    |    PRINT: 「甲」
+test/questions_en/04_arithmetic.wy:10:45   |    PRINT: "又有乙數為"
+test/questions_en/04_arithmetic.wy:10:45   |    PRINT: 「乙」
+test/questions_en/04_arithmetic.wy:12:17   |    exp 「乙」 + 「甲」 -> reg<i32>
+test/questions_en/04_arithmetic.wy:12:25   |    var 「和」 <- reg<i32>
+test/questions_en/04_arithmetic.wy:13:49   |    PRINT: "甲乙相并，厥和乃為"
+test/questions_en/04_arithmetic.wy:13:49   |    PRINT: 「和」
+test/questions_en/04_arithmetic.wy:15:17   |    exp 「甲」 - 「乙」 -> reg<i32>
+test/questions_en/04_arithmetic.wy:15:25   |    var 「差」 <- reg<i32>
+test/questions_en/04_arithmetic.wy:16:48   |    PRINT: "以乙損甲，其差為"
+test/questions_en/04_arithmetic.wy:16:48   |    PRINT: 「差」
+test/questions_en/04_arithmetic.wy:18:17   |    exp 「乙」 - 「甲」 -> reg<i32>
+test/questions_en/04_arithmetic.wy:18:25   |    var 「反差」 <- reg<i32>
+test/questions_en/04_arithmetic.wy:19:51   |    PRINT: "以甲損乙，反得其差為"
+test/questions_en/04_arithmetic.wy:19:51   |    PRINT: 「反差」
+test/questions_en/04_arithmetic.wy:21:17   |    exp 「甲」 * 「乙」 -> reg<i32>
+test/questions_en/04_arithmetic.wy:21:25   |    var 「積」 <- reg<i32>
+test/questions_en/04_arithmetic.wy:22:49   |    PRINT: "甲乙相乘，步其積為"
+test/questions_en/04_arithmetic.wy:22:49   |    PRINT: 「積」
+test/questions_en/04_arithmetic.wy:24:17   |    exp 「甲」 / 「乙」 -> reg<i32>
+test/questions_en/04_arithmetic.wy:24:25   |    var 「商」 <- reg<i32>
+test/questions_en/04_arithmetic.wy:25:17   |    exp 「甲」 % 「乙」 -> reg<i32>
+test/questions_en/04_arithmetic.wy:25:30   |    var 「餘」 <- reg<i32>
+test/questions_en/04_arithmetic.wy:26:77   |    PRINT: "以乙除甲，得商"
+test/questions_en/04_arithmetic.wy:26:77   |    PRINT: 「商」
+test/questions_en/04_arithmetic.wy:26:77   |    PRINT: "，不盡者為"
+test/questions_en/04_arithmetic.wy:26:77   |    PRINT: 「餘」
+test/questions_en/04_arithmetic.wy:28:15   |    exp 1 + 「甲」 -> reg<i32>
+test/questions_en/04_arithmetic.wy:28:20   |    set 「甲」 <- reg<i32>
+test/questions_en/04_arithmetic.wy:29:49   |    PRINT: "甲益一算，厥數乃為"
+test/questions_en/04_arithmetic.wy:29:49   |    PRINT: 「甲」
+test/questions_en/04_arithmetic.wy:31:15   |    exp 「乙」 - 1 -> reg<i32>
+test/questions_en/04_arithmetic.wy:31:20   |    set 「乙」 <- reg<i32>
+test/questions_en/04_arithmetic.wy:32:49   |    PRINT: "乙損一籌，其數化為"
+test/questions_en/04_arithmetic.wy:32:49   |    PRINT: 「乙」
+test/questions_en/04_arithmetic.wy:35:17   |    exp 「乙」 + 「甲」 -> reg<i32>
+test/questions_en/04_arithmetic.wy:35:25   |    var 「丁」 <- reg<i32>
+test/questions_en/04_arithmetic.wy:36:16   |    exp 10 + 「丁」 -> reg<i32>
+test/questions_en/04_arithmetic.wy:36:24   |    var 「戊」 <- reg<i32>
+test/questions_en/04_arithmetic.wy:37:17   |    exp 「乙」 + 「甲」 -> reg<i32>
+test/questions_en/04_arithmetic.wy:37:32   |    exp 10 + reg<i32> -> reg<i32>
+test/questions_en/04_arithmetic.wy:37:40   |    var 「己」 <- reg<i32>
+test/questions_en/04_arithmetic.wy:40:38   |    PRINT: "今以甲數"
+test/questions_en/04_arithmetic.wy:40:38   |    PRINT: 「甲」
+test/questions_en/04_arithmetic.wy:40:38   |    PRINT: "，并乙復益十，步之得"
+test/questions_en/04_arithmetic.wy:40:38   |    PRINT: 「己」
+test/questions_en/04_arithmetic.wy:40:38   |    PRINT: "，與戊同揆，皆為"
+test/questions_en/04_arithmetic.wy:40:38   |    PRINT: 「戊」
+test/questions_en/04_arithmetic.wy:43:59   |    exp 「乙」 + 「甲」 -> reg<i32>
+test/questions_en/04_arithmetic.wy:43:59   |    PRINT: "并甲於乙，其數為"
+test/questions_en/04_arithmetic.wy:43:59   |    PRINT: reg<i32>
+test/questions_en/04_arithmetic.wy:44:59   |    exp 「甲」 * 「乙」 -> reg<i32>
+test/questions_en/04_arithmetic.wy:44:59   |    PRINT: "乘甲以乙，其積為"
+test/questions_en/04_arithmetic.wy:44:59   |    PRINT: reg<i32>
+test/questions_en/04_arithmetic.wy:44:74   |< (scope id: 0, type: SCOPE_MAIN)
+╔════════╦══════╦═══════╦═════════╗
+║ Name   ║ Type ║ Index ║ Func    ║
+╠════════╬══════╬═══════╬═════════╣
+║ 冪     ║ func ║ -1    ║ builtin ║
+║ 平方根 ║ func ║ -1    ║ builtin ║
+║ 甲     ║ i32  ║ 0     ║         ║
+║ 乙     ║ i32  ║ 1     ║         ║
+║ 和     ║ i32  ║ 2     ║         ║
+║ 差     ║ i32  ║ 3     ║         ║
+║ 反差   ║ i32  ║ 4     ║         ║
+║ 積     ║ i32  ║ 5     ║         ║
+║ 商     ║ i32  ║ 6     ║         ║
+║ 餘     ║ i32  ║ 7     ║         ║
+║ 丁     ║ i32  ║ 8     ║         ║
+║ 戊     ║ i32  ║ 9     ║         ║
+║ 己     ║ i32  ║ 10    ║         ║
+╚════════╩══════╩═══════╩═════════╝
+test/questions_en/04_arithmetic.wy:44:74   |total 44 lines

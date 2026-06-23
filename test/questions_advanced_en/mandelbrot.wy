@@ -4,8 +4,8 @@ i have 1 func. name it [曼德博]. to perform. requires 2 num. called [寬]. ca
     i have 1 str. called [[丁龘蠹臺龜畫龍淼蔑高五三二]]. name it [皴法].
     NOTE. [[皴法者。圖畫之法也]].
 
-    sub 0 -> 1. name it [上]. add 0 -> 1. name it [下].
-    sub 0 -> 2. name it [左]. add 0 -> 2. name it [右].
+    sub 0 -> 1.0. name it [上]. add 0 -> 1.0. name it [下].
+    sub 0 -> 2.0. name it [左]. add 0 -> 2.0. name it [右].
 
     sub [右] -> [左]. div its -> [寬]. name it [橫步].
     sub [下] -> [上]. div its -> [高]. name it [縱步].

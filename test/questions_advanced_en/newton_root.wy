@@ -1,7 +1,7 @@
 i have 1 func. name it [牛頓求根法]. to perform. requires 1 num. called [試]. func begin.
     NOTE [[ 設甲為初限，啟算之基 ]]
-    has a num 1. name it [甲].
-    has a num 1. name it [乙].
+    has a num 1.0. name it [甲].
+    has a num 1.0. name it [乙].
     for [試] times.
         NOTE [[ 求其差謬：乙 = 甲平冪減二 ]]
         mul [甲] <- [甲]. sub its -> 2. prev [乙] topic set its is thus.

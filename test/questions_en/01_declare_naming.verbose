@@ -1,0 +1,27 @@
+test/questions_en/01_declare_naming.wy:1:2     |> (scope id: 0, type: SCOPE_MAIN)
+test/questions_en/01_declare_naming.wy:8:33    |    var 「甲」 <- 1
+test/questions_en/01_declare_naming.wy:9:39    |    var 「唉呀」 <- "噫吁戲"
+test/questions_en/01_declare_naming.wy:10:38   |    var 「陰陽」 <- false
+test/questions_en/01_declare_naming.wy:11:33   |    var 「隨義」 <- 1
+test/questions_en/01_declare_naming.wy:13:23   |    var 「大衍」 <- 50
+test/questions_en/01_declare_naming.wy:14:31   |    var 「文言」 <- "問天地好在。"
+test/questions_en/01_declare_naming.wy:16:27   |    PRINT: 「甲」
+test/questions_en/01_declare_naming.wy:17:28   |    PRINT: 「唉呀」
+test/questions_en/01_declare_naming.wy:18:29   |    PRINT: 「陰陽」
+test/questions_en/01_declare_naming.wy:19:28   |    PRINT: 「隨義」
+test/questions_en/01_declare_naming.wy:20:28   |    PRINT: 「大衍」
+test/questions_en/01_declare_naming.wy:21:28   |    PRINT: 「文言」
+test/questions_en/01_declare_naming.wy:22:34   |< (scope id: 0, type: SCOPE_MAIN)
+╔════════╦══════╦═══════╦═════════╗
+║ Name   ║ Type ║ Index ║ Func    ║
+╠════════╬══════╬═══════╬═════════╣
+║ 冪     ║ func ║ -1    ║ builtin ║
+║ 平方根 ║ func ║ -1    ║ builtin ║
+║ 甲     ║ i32  ║ 0     ║         ║
+║ 唉呀   ║ str  ║ 1     ║         ║
+║ 陰陽   ║ bool ║ 2     ║         ║
+║ 隨義   ║ i32  ║ 3     ║         ║
+║ 大衍   ║ i32  ║ 4     ║         ║
+║ 文言   ║ str  ║ 5     ║         ║
+╚════════╩══════╩═══════╩═════════╝
+test/questions_en/01_declare_naming.wy:22:34   |total 22 lines

@@ -1,0 +1,63 @@
+test/questions_en/08_multiplication_table.wy:1:2     |> (scope id: 0, type: SCOPE_MAIN)
+test/questions_en/08_multiplication_table.wy:8:21    |    var 「甲」 <- 1
+test/questions_en/08_multiplication_table.wy:9:1     |    > (while loop)
+test/questions_en/08_multiplication_table.wy:9:1     |    > (scope id: 1, type: SCOPE_WHILE_LOOP)
+test/questions_en/08_multiplication_table.wy:9:26    |        exp 「甲」 >= 10 -> reg<bool>
+test/questions_en/08_multiplication_table.wy:9:26    |        > (if)
+test/questions_en/08_multiplication_table.wy:9:26    |        > (scope id: 2, type: SCOPE_IF_STMT)
+test/questions_en/08_multiplication_table.wy:9:32    |            break (loop1)
+test/questions_en/08_multiplication_table.wy:9:38    |        < (scope id: 2, type: SCOPE_IF_STMT)
+test/questions_en/08_multiplication_table.wy:9:38    |        < (if end)
+test/questions_en/08_multiplication_table.wy:11:25   |        var 「乙」 <- 1
+test/questions_en/08_multiplication_table.wy:12:5    |        > (while loop)
+test/questions_en/08_multiplication_table.wy:12:5    |        > (scope id: 3, type: SCOPE_WHILE_LOOP)
+test/questions_en/08_multiplication_table.wy:12:30   |            exp 「乙」 >= 10 -> reg<bool>
+test/questions_en/08_multiplication_table.wy:12:30   |            > (if)
+test/questions_en/08_multiplication_table.wy:12:30   |            > (scope id: 4, type: SCOPE_IF_STMT)
+test/questions_en/08_multiplication_table.wy:12:36   |                break (loop3)
+test/questions_en/08_multiplication_table.wy:12:42   |            < (scope id: 4, type: SCOPE_IF_STMT)
+test/questions_en/08_multiplication_table.wy:12:42   |            < (if end)
+test/questions_en/08_multiplication_table.wy:14:24   |            exp 「甲」 * 「乙」 -> reg<i32>
+test/questions_en/08_multiplication_table.wy:14:32   |            var 「果」 <- reg<i32>
+test/questions_en/08_multiplication_table.wy:16:22   |            exp 「果」 >= 10 -> reg<bool>
+test/questions_en/08_multiplication_table.wy:16:22   |            > (if)
+test/questions_en/08_multiplication_table.wy:16:22   |            > (scope id: 5, type: SCOPE_IF_STMT)
+test/questions_en/08_multiplication_table.wy:16:75   |                PRINT: 「甲」
+test/questions_en/08_multiplication_table.wy:16:75   |                PRINT: 「乙」
+test/questions_en/08_multiplication_table.wy:16:75   |                PRINT: 「果」
+test/questions_en/08_multiplication_table.wy:17:9    |            < (scope id: 5, type: SCOPE_IF_STMT)
+test/questions_en/08_multiplication_table.wy:17:9    |            > (else)
+test/questions_en/08_multiplication_table.wy:17:9    |            > (scope id: 5, type: SCOPE_IF_STMT)
+test/questions_en/08_multiplication_table.wy:17:74   |                PRINT: 「甲」
+test/questions_en/08_multiplication_table.wy:17:74   |                PRINT: 「乙」
+test/questions_en/08_multiplication_table.wy:17:74   |                PRINT: "得"
+test/questions_en/08_multiplication_table.wy:17:74   |                PRINT: 「果」
+test/questions_en/08_multiplication_table.wy:17:80   |            < (scope id: 5, type: SCOPE_IF_STMT)
+test/questions_en/08_multiplication_table.wy:17:80   |            < (if end)
+test/questions_en/08_multiplication_table.wy:18:23   |            exp 「乙」 + 1 -> reg<i32>
+test/questions_en/08_multiplication_table.wy:18:28   |            set 「乙」 <- reg<i32>
+test/questions_en/08_multiplication_table.wy:19:5    |        < (scope id: 3, type: SCOPE_WHILE_LOOP)
+╔══════╦══════╦═══════╦══════╗
+║ Name ║ Type ║ Index ║ Func ║
+╠══════╬══════╬═══════╬══════╣
+║ 果   ║ i32  ║ 2     ║      ║
+╚══════╩══════╩═══════╩══════╝
+test/questions_en/08_multiplication_table.wy:19:5    |        < (while loop end)
+test/questions_en/08_multiplication_table.wy:20:19   |        exp 「甲」 + 1 -> reg<i32>
+test/questions_en/08_multiplication_table.wy:20:24   |        set 「甲」 <- reg<i32>
+test/questions_en/08_multiplication_table.wy:21:1    |    < (scope id: 1, type: SCOPE_WHILE_LOOP)
+╔══════╦══════╦═══════╦══════╗
+║ Name ║ Type ║ Index ║ Func ║
+╠══════╬══════╬═══════╬══════╣
+║ 乙   ║ i32  ║ 1     ║      ║
+╚══════╩══════╩═══════╩══════╝
+test/questions_en/08_multiplication_table.wy:21:1    |    < (while loop end)
+test/questions_en/08_multiplication_table.wy:21:4    |< (scope id: 0, type: SCOPE_MAIN)
+╔════════╦══════╦═══════╦═════════╗
+║ Name   ║ Type ║ Index ║ Func    ║
+╠════════╬══════╬═══════╬═════════╣
+║ 冪     ║ func ║ -1    ║ builtin ║
+║ 平方根 ║ func ║ -1    ║ builtin ║
+║ 甲     ║ i32  ║ 0     ║         ║
+╚════════╩══════╩═══════╩═════════╝
+test/questions_en/08_multiplication_table.wy:21:4    |total 21 lines

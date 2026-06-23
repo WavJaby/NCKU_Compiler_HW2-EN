@@ -4,13 +4,13 @@ i have 1 num. called 1. name it [半徑].
 mul [半徑] -> [半徑]. name it [半徑平方].
 
 i have 1 func. name it [求小弦]. to perform. requires 2 num. called [裏觚之面]. called [輪數]. func begin.
-	div [裏觚之面] -> 2. name it [半面].
-	if [輪數] < 1 topic. return [裏觚之面] end.
+	div [裏觚之面] -> 2.0. name it [半面].
+	if [輪數] < 1.0 topic. return [裏觚之面] end.
 	mul [半面] -> [半面]. name it [半面平方].
 	sub [半徑平方] -> [半面平方]. take 1 -> call [平方根]. name it [股].
 	sub [半徑] -> [股]. name it [小句].
 	mul [小句] -> [小句]. add its -> [半面平方]. take 1 -> call [平方根]. name it [小弦].
-	i have 2 num. called [小弦]. called sub [輪數] -> 1. take 2 -> call [求小弦]. return end.
+	i have 2 num. called [小弦]. called sub [輪數] -> 1. take 2 -> call [求小弦]. return.
 func end for [求小弦] func end.
 
 NOTE [[輪數始於一]]

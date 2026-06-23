@@ -1,0 +1,12 @@
+test/questions_en/00_quick_start.wy:1:2     |> (scope id: 0, type: SCOPE_MAIN)
+test/questions_en/00_quick_start.wy:1:33    |    var 「甲」 <- 1
+test/questions_en/00_quick_start.wy:2:27    |    PRINT: 「甲」
+test/questions_en/00_quick_start.wy:3:33    |< (scope id: 0, type: SCOPE_MAIN)
+╔════════╦══════╦═══════╦═════════╗
+║ Name   ║ Type ║ Index ║ Func    ║
+╠════════╬══════╬═══════╬═════════╣
+║ 冪     ║ func ║ -1    ║ builtin ║
+║ 平方根 ║ func ║ -1    ║ builtin ║
+║ 甲     ║ i32  ║ 0     ║         ║
+╚════════╩══════╩═══════╩═════════╝
+test/questions_en/00_quick_start.wy:3:33    |total 3 lines

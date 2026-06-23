@@ -1,0 +1,145 @@
+test/questions_advanced_en/mandelbrot.wy:1:2     |> (scope id: 0, type: SCOPE_MAIN)
+test/questions_advanced_en/mandelbrot.wy:1:24    |    > (function define: 曼德博)
+test/questions_advanced_en/mandelbrot.wy:1:24    |> (scope id: 0, type: SCOPE_FUNCTION)
+test/questions_advanced_en/mandelbrot.wy:1:66    |    > (function param: 寬, type: num)
+test/questions_advanced_en/mandelbrot.wy:1:78    |    > (function param: 高, type: num)
+test/questions_advanced_en/mandelbrot.wy:1:83    |    > (function start body)
+test/questions_advanced_en/mandelbrot.wy:4:53    |    var 「皴法」 <- "丁龘蠹臺龜畫龍淼蔑高五三二"
+test/questions_advanced_en/mandelbrot.wy:7:19    |    exp 0 - 1.0 -> reg<f64>
+test/questions_advanced_en/mandelbrot.wy:7:27    |    var 「上」 <- reg<f64>
+test/questions_advanced_en/mandelbrot.wy:7:46    |    exp 0 + 1.0 -> reg<f64>
+test/questions_advanced_en/mandelbrot.wy:7:54    |    var 「下」 <- reg<f64>
+test/questions_advanced_en/mandelbrot.wy:8:19    |    exp 0 - 2.0 -> reg<f64>
+test/questions_advanced_en/mandelbrot.wy:8:27    |    var 「左」 <- reg<f64>
+test/questions_advanced_en/mandelbrot.wy:8:46    |    exp 0 + 2.0 -> reg<f64>
+test/questions_advanced_en/mandelbrot.wy:8:54    |    var 「右」 <- reg<f64>
+test/questions_advanced_en/mandelbrot.wy:10:21   |    exp 「右」 - 「左」 -> reg<f64>
+test/questions_advanced_en/mandelbrot.wy:10:37   |    exp reg<f64> / 「寬」 -> reg<f64>
+test/questions_advanced_en/mandelbrot.wy:10:45   |    var 「橫步」 <- reg<f64>
+test/questions_advanced_en/mandelbrot.wy:11:21   |    exp 「下」 - 「上」 -> reg<f64>
+test/questions_advanced_en/mandelbrot.wy:11:37   |    exp reg<f64> / 「高」 -> reg<f64>
+test/questions_advanced_en/mandelbrot.wy:11:45   |    var 「縱步」 <- reg<f64>
+test/questions_advanced_en/mandelbrot.wy:13:26   |    var 「戊」 <- 0
+test/questions_advanced_en/mandelbrot.wy:13:31   |    > (while loop)
+test/questions_advanced_en/mandelbrot.wy:13:31   |    > (scope id: 1, type: SCOPE_WHILE_LOOP)
+test/questions_advanced_en/mandelbrot.wy:13:57   |        exp 「戊」 == 「高」 -> reg<bool>
+test/questions_advanced_en/mandelbrot.wy:13:57   |        > (if)
+test/questions_advanced_en/mandelbrot.wy:13:57   |        > (scope id: 2, type: SCOPE_IF_STMT)
+test/questions_advanced_en/mandelbrot.wy:13:63   |            break (loop1)
+test/questions_advanced_en/mandelbrot.wy:13:69   |        < (scope id: 2, type: SCOPE_IF_STMT)
+test/questions_advanced_en/mandelbrot.wy:13:69   |        < (if end)
+test/questions_advanced_en/mandelbrot.wy:15:26   |        exp 「縱步」 * 「戊」 -> reg<f64>
+test/questions_advanced_en/mandelbrot.wy:15:42   |        exp reg<f64> + 「上」 -> reg<f64>
+test/questions_advanced_en/mandelbrot.wy:15:50   |        var 「虛」 <- reg<f64>
+test/questions_advanced_en/mandelbrot.wy:17:31   |        var 「行」 <- ""
+test/questions_advanced_en/mandelbrot.wy:19:30   |        var 「戌」 <- 0
+test/questions_advanced_en/mandelbrot.wy:19:35   |        > (while loop)
+test/questions_advanced_en/mandelbrot.wy:19:35   |        > (scope id: 3, type: SCOPE_WHILE_LOOP)
+test/questions_advanced_en/mandelbrot.wy:19:61   |            exp 「戌」 == 「寬」 -> reg<bool>
+test/questions_advanced_en/mandelbrot.wy:19:61   |            > (if)
+test/questions_advanced_en/mandelbrot.wy:19:61   |            > (scope id: 4, type: SCOPE_IF_STMT)
+test/questions_advanced_en/mandelbrot.wy:19:67   |                break (loop3)
+test/questions_advanced_en/mandelbrot.wy:19:73   |            < (scope id: 4, type: SCOPE_IF_STMT)
+test/questions_advanced_en/mandelbrot.wy:19:73   |            < (if end)
+test/questions_advanced_en/mandelbrot.wy:21:30   |            exp 「橫步」 * 「戌」 -> reg<f64>
+test/questions_advanced_en/mandelbrot.wy:21:46   |            exp reg<f64> + 「左」 -> reg<f64>
+test/questions_advanced_en/mandelbrot.wy:21:54   |            var 「實」 <- reg<f64>
+test/questions_advanced_en/mandelbrot.wy:23:32   |            var 「虛虛」 <- 「虛」
+test/questions_advanced_en/mandelbrot.wy:24:32   |            var 「實實」 <- 「實」
+test/questions_advanced_en/mandelbrot.wy:28:34   |            var 「己」 <- 0
+test/questions_advanced_en/mandelbrot.wy:28:39   |            > (while loop)
+test/questions_advanced_en/mandelbrot.wy:28:39   |            > (scope id: 5, type: SCOPE_WHILE_LOOP)
+test/questions_advanced_en/mandelbrot.wy:28:64   |                exp 「己」 == 12 -> reg<bool>
+test/questions_advanced_en/mandelbrot.wy:28:64   |                > (if)
+test/questions_advanced_en/mandelbrot.wy:28:64   |                > (scope id: 6, type: SCOPE_IF_STMT)
+test/questions_advanced_en/mandelbrot.wy:28:70   |                    break (loop5)
+test/questions_advanced_en/mandelbrot.wy:28:76   |                < (scope id: 6, type: SCOPE_IF_STMT)
+test/questions_advanced_en/mandelbrot.wy:28:76   |                < (if end)
+test/questions_advanced_en/mandelbrot.wy:30:56   |                exp 「實實」 * 「實實」 -> reg<f64>
+test/questions_advanced_en/mandelbrot.wy:30:81   |                exp 「虛虛」 * 「虛虛」 -> reg<f64>
+test/questions_advanced_en/mandelbrot.wy:30:89   |                var 「甲」 <- reg<f64>
+test/questions_advanced_en/mandelbrot.wy:30:101  |                var 「乙」 <- reg<f64>
+test/questions_advanced_en/mandelbrot.wy:31:33   |                exp 「甲」 + 「乙」 -> reg<f64>
+test/questions_advanced_en/mandelbrot.wy:31:41   |                var 「丙」 <- reg<f64>
+test/questions_advanced_en/mandelbrot.wy:32:28   |                exp 「丙」 > 4 -> reg<bool>
+test/questions_advanced_en/mandelbrot.wy:32:28   |                > (if)
+test/questions_advanced_en/mandelbrot.wy:32:28   |                > (scope id: 7, type: SCOPE_IF_STMT)
+test/questions_advanced_en/mandelbrot.wy:32:34   |                    break (loop5)
+test/questions_advanced_en/mandelbrot.wy:32:40   |                < (scope id: 7, type: SCOPE_IF_STMT)
+test/questions_advanced_en/mandelbrot.wy:32:40   |                < (if end)
+test/questions_advanced_en/mandelbrot.wy:34:35   |                exp 「虛虛」 * 「實實」 -> reg<f64>
+test/questions_advanced_en/mandelbrot.wy:34:49   |                exp reg<f64> * 2 -> reg<f64>
+test/questions_advanced_en/mandelbrot.wy:34:65   |                exp reg<f64> + 「虛」 -> reg<f64>
+test/questions_advanced_en/mandelbrot.wy:34:70   |                set 「虛虛」 <- reg<f64>
+test/questions_advanced_en/mandelbrot.wy:35:33   |                exp 「甲」 - 「乙」 -> reg<f64>
+test/questions_advanced_en/mandelbrot.wy:35:49   |                exp reg<f64> + 「實」 -> reg<f64>
+test/questions_advanced_en/mandelbrot.wy:35:54   |                set 「實實」 <- reg<f64>
+test/questions_advanced_en/mandelbrot.wy:37:27   |                exp 1 + 「己」 -> reg<i32>
+test/questions_advanced_en/mandelbrot.wy:37:32   |                set 「己」 <- reg<i32>
+test/questions_advanced_en/mandelbrot.wy:37:59   |            < (scope id: 5, type: SCOPE_WHILE_LOOP)
+╔══════╦══════╦═══════╦══════╗
+║ Name ║ Type ║ Index ║ Func ║
+╠══════╬══════╬═══════╬══════╣
+║ 甲   ║ f64  ║ 17    ║      ║
+║ 乙   ║ f64  ║ 18    ║      ║
+║ 丙   ║ f64  ║ 19    ║      ║
+╚══════╩══════╩═══════╩══════╝
+test/questions_advanced_en/mandelbrot.wy:37:59   |            < (while loop end)
+test/questions_advanced_en/mandelbrot.wy:41:28   |            exp 13 - 「己」 -> reg<i32>
+test/questions_advanced_en/mandelbrot.wy:41:36   |            var 「巳」 <- reg<i32>
+test/questions_advanced_en/mandelbrot.wy:42:27   |            index 「皴法」[「巳」] -> reg<str>
+test/questions_advanced_en/mandelbrot.wy:42:40   |            var 「墨」 <- reg<str>
+test/questions_advanced_en/mandelbrot.wy:43:29   |            exp 「行」 + 「墨」 -> reg<str>
+test/questions_advanced_en/mandelbrot.wy:43:34   |            set 「行」 <- reg<str>
+test/questions_advanced_en/mandelbrot.wy:45:23   |            exp 1 + 「戌」 -> reg<i32>
+test/questions_advanced_en/mandelbrot.wy:45:28   |            set 「戌」 <- reg<i32>
+test/questions_advanced_en/mandelbrot.wy:45:55   |        < (scope id: 3, type: SCOPE_WHILE_LOOP)
+╔══════╦══════╦═══════╦══════╗
+║ Name ║ Type ║ Index ║ Func ║
+╠══════╬══════╬═══════╬══════╣
+║ 實   ║ f64  ║ 13    ║      ║
+║ 虛虛 ║ f64  ║ 14    ║      ║
+║ 實實 ║ f64  ║ 15    ║      ║
+║ 己   ║ i32  ║ 16    ║      ║
+║ 巳   ║ i32  ║ 20    ║      ║
+║ 墨   ║ str  ║ 21    ║      ║
+╚══════╩══════╩═══════╩══════╝
+test/questions_advanced_en/mandelbrot.wy:45:55   |        < (while loop end)
+test/questions_advanced_en/mandelbrot.wy:47:35   |        PRINT: 「行」
+test/questions_advanced_en/mandelbrot.wy:48:19   |        exp 1 + 「戊」 -> reg<i32>
+test/questions_advanced_en/mandelbrot.wy:48:24   |        set 「戊」 <- reg<i32>
+test/questions_advanced_en/mandelbrot.wy:48:51   |    < (scope id: 1, type: SCOPE_WHILE_LOOP)
+╔══════╦══════╦═══════╦══════╗
+║ Name ║ Type ║ Index ║ Func ║
+╠══════╬══════╬═══════╬══════╣
+║ 虛   ║ f64  ║ 10    ║      ║
+║ 行   ║ str  ║ 11    ║      ║
+║ 戌   ║ i32  ║ 12    ║      ║
+╚══════╩══════╩═══════╩══════╝
+test/questions_advanced_en/mandelbrot.wy:48:51   |    < (while loop end)
+test/questions_advanced_en/mandelbrot.wy:49:20   |    < (function end: 曼德博)
+test/questions_advanced_en/mandelbrot.wy:49:20   |< (scope id: 0, type: SCOPE_FUNCTION)
+╔══════╦══════╦═══════╦══════╗
+║ Name ║ Type ║ Index ║ Func ║
+╠══════╬══════╬═══════╬══════╣
+║ 寬   ║ f64  ║ 0     ║      ║
+║ 高   ║ f64  ║ 1     ║      ║
+║ 皴法 ║ str  ║ 2     ║      ║
+║ 上   ║ f64  ║ 3     ║      ║
+║ 下   ║ f64  ║ 4     ║      ║
+║ 左   ║ f64  ║ 5     ║      ║
+║ 右   ║ f64  ║ 6     ║      ║
+║ 橫步 ║ f64  ║ 7     ║      ║
+║ 縱步 ║ f64  ║ 8     ║      ║
+║ 戊   ║ i32  ║ 9     ║      ║
+╚══════╩══════╩═══════╩══════╝
+test/questions_advanced_en/mandelbrot.wy:51:24   |    call 曼德博(2 args)
+test/questions_advanced_en/mandelbrot.wy:51:24   |< (scope id: 0, type: SCOPE_MAIN)
+╔════════╦══════╦═══════╦═════════╗
+║ Name   ║ Type ║ Index ║ Func    ║
+╠════════╬══════╬═══════╬═════════╣
+║ 冪     ║ func ║ -1    ║ builtin ║
+║ 平方根 ║ func ║ -1    ║ builtin ║
+║ 曼德博 ║ func ║ 0     ║ ctx:1   ║
+╚════════╩══════╩═══════╩═════════╝
+test/questions_advanced_en/mandelbrot.wy:51:24   |total 51 lines

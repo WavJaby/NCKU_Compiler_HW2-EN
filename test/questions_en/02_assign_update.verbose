@@ -1,0 +1,32 @@
+test/questions_en/02_assign_update.wy:1:2     |> (scope id: 0, type: SCOPE_MAIN)
+test/questions_en/02_assign_update.wy:7:23    |    var 「零」 <- 0
+test/questions_en/02_assign_update.wy:7:35    |    var 「無」 <- 0
+test/questions_en/02_assign_update.wy:8:21    |    var 「否」 <- false
+test/questions_en/02_assign_update.wy:9:53    |    var 「甲」 <- 1
+test/questions_en/02_assign_update.wy:9:64    |    var 「乙」 <- 3
+test/questions_en/02_assign_update.wy:9:75    |    var 「丙」 <- 5
+test/questions_en/02_assign_update.wy:10:35   |    var 「丁」 <- 「甲」
+test/questions_en/02_assign_update.wy:11:23   |    var 「大衍」 <- 50
+test/questions_en/02_assign_update.wy:13:27   |    PRINT: 「甲」
+test/questions_en/02_assign_update.wy:14:27   |    PRINT: 「乙」
+test/questions_en/02_assign_update.wy:15:27   |    PRINT: 「丙」
+test/questions_en/02_assign_update.wy:16:27   |    PRINT: 「丁」
+test/questions_en/02_assign_update.wy:17:28   |    PRINT: 「大衍」
+test/questions_en/02_assign_update.wy:19:26   |    set 「丙」 <- 「大衍」
+test/questions_en/02_assign_update.wy:21:27   |    PRINT: 「丙」
+test/questions_en/02_assign_update.wy:22:33   |< (scope id: 0, type: SCOPE_MAIN)
+╔════════╦══════╦═══════╦═════════╗
+║ Name   ║ Type ║ Index ║ Func    ║
+╠════════╬══════╬═══════╬═════════╣
+║ 冪     ║ func ║ -1    ║ builtin ║
+║ 平方根 ║ func ║ -1    ║ builtin ║
+║ 零     ║ i32  ║ 0     ║         ║
+║ 無     ║ i32  ║ 1     ║         ║
+║ 否     ║ bool ║ 2     ║         ║
+║ 甲     ║ i32  ║ 3     ║         ║
+║ 乙     ║ i32  ║ 4     ║         ║
+║ 丙     ║ i32  ║ 5     ║         ║
+║ 丁     ║ i32  ║ 6     ║         ║
+║ 大衍   ║ i32  ║ 7     ║         ║
+╚════════╩══════╩═══════╩═════════╝
+test/questions_en/02_assign_update.wy:22:33   |total 22 lines

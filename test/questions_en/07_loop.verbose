@@ -1,0 +1,53 @@
+test/questions_en/07_loop.wy:1:2     |> (scope id: 0, type: SCOPE_MAIN)
+test/questions_en/07_loop.wy:7:32    |    PRINT: "春日宴。"
+test/questions_en/07_loop.wy:9:22    |    var 「酒數」 <- 3
+test/questions_en/07_loop.wy:12:1    |    > (while loop)
+test/questions_en/07_loop.wy:12:1    |    > (scope id: 1, type: SCOPE_WHILE_LOOP)
+test/questions_en/07_loop.wy:12:26   |        exp 「酒數」 == 0 -> reg<bool>
+test/questions_en/07_loop.wy:12:26   |        > (if)
+test/questions_en/07_loop.wy:12:26   |        > (scope id: 2, type: SCOPE_IF_STMT)
+test/questions_en/07_loop.wy:12:32   |            break (loop1)
+test/questions_en/07_loop.wy:12:38   |        < (scope id: 2, type: SCOPE_IF_STMT)
+test/questions_en/07_loop.wy:12:38   |        < (if end)
+test/questions_en/07_loop.wy:15:29   |        PRINT: "飲綠酒"
+test/questions_en/07_loop.wy:15:29   |        PRINT: 「酒數」
+test/questions_en/07_loop.wy:15:29   |        PRINT: "杯，高歌一遍。"
+test/questions_en/07_loop.wy:17:20   |        exp 「酒數」 - 1 -> reg<i32>
+test/questions_en/07_loop.wy:17:25   |        set 「酒數」 <- reg<i32>
+test/questions_en/07_loop.wy:18:1    |    < (scope id: 1, type: SCOPE_WHILE_LOOP)
+test/questions_en/07_loop.wy:18:1    |    < (while loop end)
+test/questions_en/07_loop.wy:20:39   |    PRINT: "酒闌之際，再拜陳三願。"
+test/questions_en/07_loop.wy:23:9    |    > (for loop, count: 2)
+test/questions_en/07_loop.wy:23:9    |    > (scope id: 3, type: SCOPE_FOR_LOOP)
+test/questions_en/07_loop.wy:24:46   |        PRINT: "一願郎君千歲，二願妾身常健。"
+test/questions_en/07_loop.wy:25:1    |    < (scope id: 3, type: SCOPE_FOR_LOOP)
+test/questions_en/07_loop.wy:25:1    |    < (for loop end)
+test/questions_en/07_loop.wy:27:22   |    var 「願數」 <- 3
+test/questions_en/07_loop.wy:30:13   |    exp 「願數」 > 2 -> reg<bool>
+test/questions_en/07_loop.wy:30:13   |    > (if)
+test/questions_en/07_loop.wy:30:13   |    > (scope id: 4, type: SCOPE_IF_STMT)
+test/questions_en/07_loop.wy:31:13   |        > (for loop, count: 2)
+test/questions_en/07_loop.wy:31:13   |        > (scope id: 5, type: SCOPE_FOR_LOOP)
+test/questions_en/07_loop.wy:32:38   |            PRINT: "三願如同梁上燕，歲歲長相見。"
+test/questions_en/07_loop.wy:33:5    |        < (scope id: 5, type: SCOPE_FOR_LOOP)
+test/questions_en/07_loop.wy:33:5    |        < (for loop end)
+test/questions_en/07_loop.wy:34:1    |    < (scope id: 4, type: SCOPE_IF_STMT)
+test/questions_en/07_loop.wy:34:1    |    > (else)
+test/questions_en/07_loop.wy:34:1    |    > (scope id: 4, type: SCOPE_IF_STMT)
+test/questions_en/07_loop.wy:35:13   |        > (for loop, count: 3)
+test/questions_en/07_loop.wy:35:13   |        > (scope id: 6, type: SCOPE_FOR_LOOP)
+test/questions_en/07_loop.wy:36:40   |            PRINT: "怪哉！願數不足，花落人散兩成空！"
+test/questions_en/07_loop.wy:37:5    |        < (scope id: 6, type: SCOPE_FOR_LOOP)
+test/questions_en/07_loop.wy:37:5    |        < (for loop end)
+test/questions_en/07_loop.wy:38:1    |    < (scope id: 4, type: SCOPE_IF_STMT)
+test/questions_en/07_loop.wy:38:1    |    < (if end)
+test/questions_en/07_loop.wy:38:4    |< (scope id: 0, type: SCOPE_MAIN)
+╔════════╦══════╦═══════╦═════════╗
+║ Name   ║ Type ║ Index ║ Func    ║
+╠════════╬══════╬═══════╬═════════╣
+║ 冪     ║ func ║ -1    ║ builtin ║
+║ 平方根 ║ func ║ -1    ║ builtin ║
+║ 酒數   ║ i32  ║ 0     ║         ║
+║ 願數   ║ i32  ║ 1     ║         ║
+╚════════╩══════╩═══════╩═════════╝
+test/questions_en/07_loop.wy:38:4    |total 38 lines
