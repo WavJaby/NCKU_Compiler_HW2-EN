@@ -4,7 +4,7 @@ All IR patterns you will actually need in this assignment, using the exact namin
 
 Consult this when implementing IR-generation functions, or when you're unsure how to write a particular instruction.
 
-Related documents: [Assignment Spec](https://hackmd.io/@WavJaby/NCKU_1142_COMPILER_HW2)　[README](README.md)　[YACC Cheatsheet](YACC_CHEATSHEET.md)
+Related documents: [Assignment Spec](114-2%20Compiler%20Homework%202.md)　[README](README.md)　[YACC Cheatsheet](YACC_CHEATSHEET.md)
 
 ---
 

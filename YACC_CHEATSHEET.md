@@ -2,7 +2,7 @@
 
 Supplementary advanced Bison usage, focused on scenarios you will actually encounter in this assignment. Refer to this when you run into problems implementing `compiler.y`.
 
-Related documents: [Assignment Spec](https://hackmd.io/@WavJaby/NCKU_1142_COMPILER_HW2)　[README](README.md)　[LLVM IR Cheatsheet](LLVM_IR_CHEATSHEET.md)
+Related documents: [Assignment Spec](114-2%20Compiler%20Homework%202.md)　[README](README.md)　[LLVM IR Cheatsheet](LLVM_IR_CHEATSHEET.md)
 
 ---
 

@@ -16,10 +16,11 @@ This assignment builds on the lexer (`compiler.l`) from Homework 1 and requires 
 
 | Document | Purpose | When to read |
 |----------|---------|--------------|
-| [Assignment Spec (HackMD)](https://hackmd.io/@WavJaby/NCKU_1142_COMPILER_HW2) | Assignment description, YACC concepts intro, four-week schedule | **Read first** |
+| [Assignment Spec](114-2%20Compiler%20Homework%202.md) | Assignment description, YACC concepts intro, four-week schedule | **Read first** |
 | This file (`README.md`) | Environment setup, fill-in specs, utility function reference | Read through before starting; refer back while implementing |
 | [`YACC_CHEATSHEET.md`](YACC_CHEATSHEET.md) | Advanced `compiler.y` syntax: `$<type>N`, `$0`/`$-1`, mid-rule actions, shift/reduce conflict debugging | Refer to when you hit problems in `compiler.y` |
 | [`LLVM_IR_CHEATSHEET.md`](LLVM_IR_CHEATSHEET.md) | All IR instruction references, phi nodes, if/for/while block structures | Refer to when implementing IR generation functions |
+| [`CHANGELOG.md`](CHANGELOG.md) | Post-release fixes, whether you need to change your own code, how to merge | check before every `git pull`/`merge` |
 
 ---
 
@@ -28,7 +29,7 @@ This assignment builds on the lexer (`compiler.l`) from Homework 1 and requires 
 ### Getting the Assignment Files
 
 ```bash
-git clone --recurse-submodules https://github.com/WavJaby/NCKU_Compiler_HW2.git
+git clone --recurse-submodules https://github.com/WavJaby/NCKU_Compiler_HW2-EN.git NCKU_Compiler_HW2
 cd NCKU_Compiler_HW2
 ```
 

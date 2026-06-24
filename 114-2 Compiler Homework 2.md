@@ -1,5 +1,7 @@
 # 114-2 Compiler Homework 2
 
+> 📌 Bug fixes/updates to this repo are tracked in [`CHANGELOG.md`](CHANGELOG.md) — check it before every `git pull`/`merge`.
+
 <details><summary>Message from the compiler TA:</summary>
 
 This semester was originally planned to have three assignments. The third one I had wanted to be a fun GPU-acceleration project using MLIR for matrix operations ~~(so you'd have a cool project to talk about in interviews)~~. Unfortunately, I didn't have time to finish it (I originally planned to release assignments 2 and 3 together since they're connected). Then midterms hit and things got really busy, and combined with my chronic procrastination (I think it's actually that I set the bar too high for code quality 🤥), the assignment that should have been out two weeks ago still isn't done because I haven't fully figured out MLIR yet.
@@ -357,16 +359,16 @@ void yyerror(const char *s) {
 | `%token` | Declare a terminal symbol (token) |
 | `yylval` | Global variable used by Lex to pass token values to YACC |
 
-> **Advanced usage** (`$<type>N`, Mid-Rule Actions, `$0`, `YYABORT`, location tracking `@N`) — see [YACC_CHEATSHEET.md](https://github.com/WavJaby/NCKU_Compiler_HW2/blob/master/YACC_CHEATSHEET.md).
+> **Advanced usage** (`$<type>N`, Mid-Rule Actions, `$0`, `YYABORT`, location tracking `@N`) — see [YACC_CHEATSHEET.md](YACC_CHEATSHEET.md).
 
 ---
 
 ## Assignment Description
 
 > [!NOTE]
-> **Source code / assignment skeleton**: [github.com/WavJaby/NCKU_Compiler_HW2](https://github.com/WavJaby/NCKU_Compiler_HW2)
-> Environment setup and detailed documentation (function signatures, step-by-step TODO hints, utility function reference) are in [README.md](https://github.com/WavJaby/NCKU_Compiler_HW2/blob/master/README.md)
-> Not sure where to start? Begin with [Quick Start — First Statement](https://github.com/WavJaby/NCKU_Compiler_HW2/blob/master/README.md#quick-start--first-statement)
+> **Source code / assignment skeleton**: [github.com/WavJaby/NCKU_Compiler_HW2-EN](https://github.com/WavJaby/NCKU_Compiler_HW2-EN)
+> Environment setup and detailed documentation (function signatures, step-by-step TODO hints, utility function reference) are in [README.md](README.md)
+> Not sure where to start? Begin with [Quick Start — First Statement](README.md#quick-start--first-statement)
 
 Don't be intimidated by the length of the assignment description and the number of TODOs. All these documents were organized with Claude as a collaborator, working from the source code, so they contain everything you need to complete the assignment. I've read through all of them as well — theoretically this is everything. If anything is missing, please let me know.
 
@@ -411,9 +413,9 @@ A local IDE (CLion / VS Code) offers the following advantages:
 
 | Need | Tool | Notes |
 |------|------|-------|
-| **Part 1 verbose output** (graded) | [`compilerLog(fmt, ...)`](https://github.com/WavJaby/NCKU_Compiler_HW2/blob/master/README.md#utility-function-reference) | Output with `-v`; includes line prefix; this is what `.verbose` reference files compare against |
+| **Part 1 verbose output** (graded) | [`compilerLog(fmt, ...)`](README.md#utility-function-reference) | Output with `-v`; includes line prefix; this is what `.verbose` reference files compare against |
 | Lexer token tracing | `lexerLog(fmt, ...)` | Output with `-l`; lexer debugging only; does not affect grading |
-| Report semantic errors | [`yyerrorf(fmt, ...)` / `yyerrorlf(fmt, loc, ...)`](https://github.com/WavJaby/NCKU_Compiler_HW2/blob/master/README.md#error-reporting) | Prints offending line number + source block; much faster to locate than printf; **delete when done debugging** |
+| Report semantic errors | [`yyerrorf(fmt, ...)` / `yyerrorlf(fmt, loc, ...)`](README.md#error-reporting) | Prints offending line number + source block; much faster to locate than printf; **delete when done debugging** |
 | Crash location | IDE / GDB, `cmake -DCMAKE_BUILD_TYPE=Debug` | — |
 
 > [!CAUTION]
@@ -431,8 +433,8 @@ A local IDE (CLion / VS Code) offers the following advantages:
 |------|-------------|
 | Environment setup | CMake build, run existing test cases |
 | `compiler.l` tweaks | Update HW1 rules to set `yylval` + `return`; add `"以施"` / modify `"乃得"` |
-| [Quick Start](https://github.com/WavJaby/NCKU_Compiler_HW2/blob/master/README.md#quick-start--first-statement) | Write the long rule directly in `OperationStmt` and get the first statement working; confirm the pipeline works end to end |
-| [Sub-rule refactor](https://github.com/WavJaby/NCKU_Compiler_HW2/blob/master/README.md#after-quick-start--refactoring-direction) | Break the Quick Start long rule into `CreateValueDataListStmt`, `LitOrVarStmt`, `VariableDefineStmt` |
+| [Quick Start](README.md#quick-start--first-statement) | Write the long rule directly in `OperationStmt` and get the first statement working; confirm the pipeline works end to end |
+| [Sub-rule refactor](README.md#after-quick-start--refactoring-direction) | Break the Quick Start long rule into `CreateValueDataListStmt`, `LitOrVarStmt`, `VariableDefineStmt` |
 | `scope_addSymbol` | Add duplicate-symbol check |
 | `scope_findSymbol` | Add the `searchCtx == ctx` normal return branch |
 | `value_data.c` | Add type check and count cap |
@@ -467,7 +469,7 @@ A local IDE (CLion / VS Code) offers the following advantages:
 |------|-------------|
 | `code_if` / `code_ifEnd` | Basic branch; handle the no-else path first |
 | `code_elseIfLabel` / `code_elseIf` / `code_else` | Complete if-elseif-else chain |
-| `code_forLoop` / `code_forLoopEnd` | phi node + 4-label structure (see [LLVM_IR_CHEATSHEET.md](https://github.com/WavJaby/NCKU_Compiler_HW2/blob/master/LLVM_IR_CHEATSHEET.md) §phi nodes) |
+| `code_forLoop` / `code_forLoopEnd` | phi node + 4-label structure (see [LLVM_IR_CHEATSHEET.md](LLVM_IR_CHEATSHEET.md) §phi nodes) |
 | `code_break` | Get the nearest loop scope; emit `br` to the exit label (~4 lines) |
 | Array index access | `夫「X」之「N」` → call the provided `object_getIndex` |
 | `code_getLength` | Get string/array length; call runtime functions |
@@ -491,7 +493,7 @@ A local IDE (CLion / VS Code) offers the following advantages:
 
 ### Fill-in Function Overview
 
-Full specifications in [README.md — Fill-in Module Specifications](https://github.com/WavJaby/NCKU_Compiler_HW2/blob/master/README.md#fill-in-module-specifications)
+Full specifications in [README.md — Fill-in Module Specifications](README.md#fill-in-module-specifications)
 
 | File | Function | Week |
 |------|----------|------|
@@ -511,7 +513,7 @@ Full specifications in [README.md — Fill-in Module Specifications](https://git
 
 ### LLVM IR Quick Reference
 
-For-loop phi nodes, if/else basic block structure, and all `buffPrintln` usage patterns: see [LLVM_IR_CHEATSHEET.md](https://github.com/WavJaby/NCKU_Compiler_HW2/blob/master/LLVM_IR_CHEATSHEET.md) (written specifically for this assignment; naming and framework match exactly).
+For-loop phi nodes, if/else basic block structure, and all `buffPrintln` usage patterns: see [LLVM_IR_CHEATSHEET.md](LLVM_IR_CHEATSHEET.md) (written specifically for this assignment; naming and framework match exactly).
 
 ---
 
