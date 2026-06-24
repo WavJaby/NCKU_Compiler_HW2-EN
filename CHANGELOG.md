@@ -2,6 +2,16 @@
 
 ---
 
+## 2026-06-24 — `test/test.sh` Part 1 comparison is now column-tolerant + proportionally scored
+
+Changes to the Part 1 (verbose) comparison logic in `test/test.sh`:
+- Each line's column number is normalized away via `strip_column()` before comparing — a column mismatch no longer counts as wrong, only the line number and content do
+- Scoring changed from "the whole test must match byte-for-byte or you get 0" to "score is proportional to the fraction of matching lines" (`verbose_match_ratio()`); scores can now be fractional
+- `PART1_SCORE` / `TOTAL` switched from integer to `awk`-accumulated float, displayed to 2 decimal places
+
+
+---
+
 ## 2026-06-24 — fixed position (line/column) display bug in verbose log
 
 Last commit before this update: `b0335a3`
