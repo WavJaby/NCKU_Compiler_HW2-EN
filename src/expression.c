@@ -43,7 +43,11 @@ Object code_expression(const ExpOp eop, const bool opLeft, Object* a, Object* b,
     //   4. select the IR opcode based on type (integer: opIRIntNames / float: opIRFloatNames)
     //   5. emit the IR instruction; string addition must call the runtime function instead of an arithmetic instruction
     //      see LLVM_IR_CHEATSHEET.md for available IR opcodes and runtime functions
-    //   6. clean up Objects and return the REGISTER Object
+    //   6. log with compilerLogAt(aLoc, ...), not compilerLog: by now the global yylloc may
+    //      already have been advanced by lookahead into the next statement. In the grammar
+    //      rule, make sure aLoc is passed as this expression's own start token, not an
+    //      operand's position -- see YACC_CHEATSHEET.md
+    //   7. clean up Objects and return the REGISTER Object
 
 FAILED:
     if (!object_sameRegister(a, b)) object_free(a);

@@ -14,8 +14,8 @@ Object func_define(const ScientificNotation* funcDefCount, char* funcName);
 bool func_defineAddParam(ObjectType type, char* name);
 bool func_defineBody();
 bool func_defineBodyEnd(Object* funcObj, char* funcName);
-bool code_return(const Object* obj);
-bool code_returnValue(ValueData* value);
+bool code_return(const Object* obj, const YYLTYPE* tokenLoc);
+bool code_returnValue(ValueData* value, const YYLTYPE* tokenLoc);
 
 FuncCallInfo* func_callInit(Object* funcObj);
 bool func_callArgAdd(FuncCallInfo* funcCall, Object* arg, const YYLTYPE* argLocation);

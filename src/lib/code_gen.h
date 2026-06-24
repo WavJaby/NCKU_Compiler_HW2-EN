@@ -17,19 +17,21 @@
 
 // Location prefix with compensated indent (default 3 digits per line/col number)
 #define _DIGIT_COUNT(n) ((n) < 10 ? 1 : (n) < 100 ? 2 : 3)
-#define _LOC_COMP \
-    (3 - _DIGIT_COUNT(yylloc.first_line)) + (3 - _DIGIT_COUNT(yylloc.first_column + 1))
+#define _LOC_COMP_AT(loc) \
+    (3 - _DIGIT_COUNT((loc)->first_line)) + (3 - _DIGIT_COUNT((loc)->first_column))
 
 #define LOC_FMT "%s:%d:%d %*s|"
-#define LOC_VAL inputFileRelativePath, yylloc.first_line, yylloc.first_column + 1, \
-    _LOC_COMP, ""
+#define LOC_VAL_AT(loc) inputFileRelativePath, (loc)->first_line, (loc)->first_column, \
+    _LOC_COMP_AT(loc), ""
 
-#define compilerLog(format, ...) do { \
-    if(verbose) fprintf(stdout, LOC_FMT SCOPE_SPACE_FMT "%s" format "%s",LOC_VAL, SCOPE_SPACE_VAL,  COLOR_BLUE, ##__VA_ARGS__, COLOR_RESET); \
+#define compilerLogAt(loc, format, ...) do { \
+    if(verbose) fprintf(stdout, LOC_FMT SCOPE_SPACE_FMT "%s" format "%s",LOC_VAL_AT(loc), SCOPE_SPACE_VAL,  COLOR_BLUE, ##__VA_ARGS__, COLOR_RESET); \
 } while (0)
 
+#define compilerLog(format, ...) compilerLogAt(&yylloc, format, ##__VA_ARGS__)
+
 #define lexerLog(format, ...) do { \
-    if(lexerVerbose) fprintf(stdout, LOC_FMT SCOPE_SPACE_FMT "%s" format "%s", LOC_VAL, SCOPE_SPACE_VAL, COLOR_CYAN, ##__VA_ARGS__, COLOR_RESET); \
+    if(lexerVerbose) fprintf(stdout, LOC_FMT SCOPE_SPACE_FMT "%s" format "%s", LOC_VAL_AT(&yylloc), SCOPE_SPACE_VAL, COLOR_CYAN, ##__VA_ARGS__, COLOR_RESET); \
 } while (0)
 
 #define buffPrintln(buff, format, ...) do { \

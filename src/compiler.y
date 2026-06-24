@@ -112,12 +112,17 @@ ConditionStmt
 ;
 
 /* TODO: Various operation statements
- * Covers variable declaration, naming, assignment, function calls, array push, print, and return.
+ * Covers variable declaration, naming, assignment, function calls, array push, print, return, and break.
  * Functions: object_ValueDataList*, code_createVariable, code_assign, code_stdoutPrint,
- *            code_arrayPush, code_return, code_returnValue,
+ *            code_arrayPush, code_return, code_returnValue, code_break,
  *            func_callInit, func_callArgAdd, func_call, func_takeAndCall
  * Note: function calls come in prefix (施) and postfix (以施) forms; use mid-rule action with $0 to pass intermediate values;
  *       the call result can be followed by naming, return, print, or omitted
+ * Location arg: code_return/code_returnValue/code_break each take an extra tokenLoc
+ *       parameter — pass the RETURN/BREAK token's own @N (e.g. &@1). Don't skip this:
+ *       by the time the rule reduces, the parser may already have peeked one token
+ *       ahead, so the global yylloc could point at the next statement instead of
+ *       this token's own position.
  */
 OperationStmt
     :
@@ -135,6 +140,13 @@ VariableDefineStmt
 /* TODO: Expressions (arithmetic/logical, chained)
  * Functions: code_expression/Mod, code_expressionChain/Mod
  * Note: the first item in a chain uses code_expression, subsequent items use code_expressionChain; update ctx->last_result
+ * Location arg: aLoc is not simply "the left operand's position" -- it's the start
+ *       token of the whole expression, used for both logging and error reporting.
+ *       For most rules the first symbol IS the start, so just pass &@1. But for
+ *       rules where the operator/keyword comes first (e.g. starting with the
+ *       arithmetic-op token, or starting with THOSE for binary logic), don't set
+ *       aLoc to the operand's position -- pass that leading operator/keyword's own
+ *       &@1, otherwise the verbose log position will be off.
  */
 ExpressionChainStmt
     :

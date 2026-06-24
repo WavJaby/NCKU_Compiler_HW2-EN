@@ -1,4 +1,4 @@
-test/策問/03_留墨_書法.wy:1:2     |> (scope id: 0, type: SCOPE_MAIN)
+test/策問/03_留墨_書法.wy:1:1     |> (scope id: 0, type: SCOPE_MAIN)
 test/策問/03_留墨_書法.wy:8:9     |    var 「甲」 <- 0
 test/策問/03_留墨_書法.wy:9:12    |    var 「己」 <- 1
 test/策問/03_留墨_書法.wy:10:15   |    var 「乙」 <- 3

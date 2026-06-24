@@ -176,6 +176,9 @@ Object code_getLength(Object* obj, const YYLTYPE* loc) {
     //   3. call the appropriate runtime function based on type (STR / ARRAY) and emit the call IR
     //      see LLVM_IR_CHEATSHEET.md §Runtime Functions for available runtime functions
     //   4. clean up Object and return the REGISTER Object containing the result register
+    //   when logging, use compilerLogAt(loc, ...), not compilerLog(...):
+    //   loc is this ValueStmt's real start position; by the time this action fires, the global
+    //   yylloc may already have been advanced by lookahead into the next statement
     object_free(obj);
     return (Object){.type = OBJECT_TYPE_UNDEFINED};
 }
@@ -216,7 +219,7 @@ bool code_arrayPush(const Object* arr, Object* val, const YYLTYPE* loc) {
         goto FAILED;
     }
 
-    compilerLog("push 「%s」 <- %s\n", arr->value.symbol->name, object_print(val));
+    compilerLogAt(loc, "push 「%s」 <- %s\n", arr->value.symbol->name, object_print(val));
     buffPrintln(&ctx->code, "call void @wy_rt_array_add_ptr(ptr %s, ptr %s)", arrName, ptrName);
 
     object_free(&regArr);

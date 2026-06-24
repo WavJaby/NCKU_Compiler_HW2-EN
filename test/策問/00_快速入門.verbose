@@ -1,4 +1,4 @@
-test/策問/00_快速入門.wy:1:2     |> (scope id: 0, type: SCOPE_MAIN)
+test/策問/00_快速入門.wy:1:1     |> (scope id: 0, type: SCOPE_MAIN)
 test/策問/00_快速入門.wy:1:12    |    var 「甲」 <- 1
 test/策問/00_快速入門.wy:2:11    |    PRINT: 「甲」
 test/策問/00_快速入門.wy:3:14    |< (scope id: 0, type: SCOPE_MAIN)

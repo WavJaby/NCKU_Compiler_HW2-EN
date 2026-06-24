@@ -1,8 +1,8 @@
-test/策問/08_口訣_乘算.wy:1:2     |> (scope id: 0, type: SCOPE_MAIN)
+test/策問/08_口訣_乘算.wy:1:1     |> (scope id: 0, type: SCOPE_MAIN)
 test/策問/08_口訣_乘算.wy:8:7     |    var 「甲」 <- 1
 test/策問/08_口訣_乘算.wy:9:1     |    > (while loop)
 test/策問/08_口訣_乘算.wy:9:1     |    > (scope id: 1, type: SCOPE_WHILE_LOOP)
-test/策問/08_口訣_乘算.wy:9:13    |        exp 「甲」 >= 10 -> reg<爻>
+test/策問/08_口訣_乘算.wy:9:6     |        exp 「甲」 >= 10 -> reg<爻>
 test/策問/08_口訣_乘算.wy:9:13    |        > (if)
 test/策問/08_口訣_乘算.wy:9:13    |        > (scope id: 2, type: SCOPE_IF_STMT)
 test/策問/08_口訣_乘算.wy:9:14    |            break (loop1)
@@ -11,15 +11,15 @@ test/策問/08_口訣_乘算.wy:9:16    |        < (if end)
 test/策問/08_口訣_乘算.wy:11:11   |        var 「乙」 <- 1
 test/策問/08_口訣_乘算.wy:12:5    |        > (while loop)
 test/策問/08_口訣_乘算.wy:12:5    |        > (scope id: 3, type: SCOPE_WHILE_LOOP)
-test/策問/08_口訣_乘算.wy:12:17   |            exp 「乙」 >= 10 -> reg<爻>
+test/策問/08_口訣_乘算.wy:12:10   |            exp 「乙」 >= 10 -> reg<爻>
 test/策問/08_口訣_乘算.wy:12:17   |            > (if)
 test/策問/08_口訣_乘算.wy:12:17   |            > (scope id: 4, type: SCOPE_IF_STMT)
 test/策問/08_口訣_乘算.wy:12:18   |                break (loop3)
 test/策問/08_口訣_乘算.wy:12:20   |            < (scope id: 4, type: SCOPE_IF_STMT)
 test/策問/08_口訣_乘算.wy:12:20   |            < (if end)
-test/策問/08_口訣_乘算.wy:14:17   |            exp 「甲」 * 「乙」 -> reg<全數>
+test/策問/08_口訣_乘算.wy:14:9    |            exp 「甲」 * 「乙」 -> reg<全數>
 test/策問/08_口訣_乘算.wy:14:20   |            var 「果」 <- reg<全數>
-test/策問/08_口訣_乘算.wy:16:17   |            exp 「果」 >= 10 -> reg<爻>
+test/策問/08_口訣_乘算.wy:16:10   |            exp 「果」 >= 10 -> reg<爻>
 test/策問/08_口訣_乘算.wy:16:17   |            > (if)
 test/策問/08_口訣_乘算.wy:16:17   |            > (scope id: 5, type: SCOPE_IF_STMT)
 test/策問/08_口訣_乘算.wy:16:35   |                PRINT: 「甲」
@@ -34,7 +34,7 @@ test/策問/08_口訣_乘算.wy:17:34   |                PRINT: "得"
 test/策問/08_口訣_乘算.wy:17:34   |                PRINT: 「果」
 test/策問/08_口訣_乘算.wy:17:36   |            < (scope id: 5, type: SCOPE_IF_STMT)
 test/策問/08_口訣_乘算.wy:17:36   |            < (if end)
-test/策問/08_口訣_乘算.wy:18:16   |            exp 「乙」 + 1 -> reg<全數>
+test/策問/08_口訣_乘算.wy:18:9    |            exp 「乙」 + 1 -> reg<全數>
 test/策問/08_口訣_乘算.wy:18:18   |            set 「乙」 <- reg<全數>
 test/策問/08_口訣_乘算.wy:19:5    |        < (scope id: 3, type: SCOPE_WHILE_LOOP)
 ╔══════╦══════╦═══════╦════╗
@@ -43,7 +43,7 @@ test/策問/08_口訣_乘算.wy:19:5    |        < (scope id: 3, type: SCOPE_WHI
 ║ 果   ║ 全數 ║ 2     ║    ║
 ╚══════╩══════╩═══════╩════╝
 test/策問/08_口訣_乘算.wy:19:5    |        < (while loop end)
-test/策問/08_口訣_乘算.wy:20:12   |        exp 「甲」 + 1 -> reg<全數>
+test/策問/08_口訣_乘算.wy:20:5    |        exp 「甲」 + 1 -> reg<全數>
 test/策問/08_口訣_乘算.wy:20:14   |        set 「甲」 <- reg<全數>
 test/策問/08_口訣_乘算.wy:21:1    |    < (scope id: 1, type: SCOPE_WHILE_LOOP)
 ╔══════╦══════╦═══════╦════╗

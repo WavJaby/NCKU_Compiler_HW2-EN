@@ -145,8 +145,8 @@ bool func_defineBodyEnd(Object* funcObj, char* funcName) {
     return false;
 }
 
-bool code_return(const Object* obj) {
-    compilerLog("return %s\n", object_print(obj));
+bool code_return(const Object* obj, const YYLTYPE* tokenLoc) {
+    compilerLogAt(tokenLoc, "return %s\n", object_print(obj));
 
     ScopeData* func_scope = scope_getFunction();
     if (!func_scope) {
@@ -185,10 +185,10 @@ FAILED:
     return true;
 }
 
-bool code_returnValue(ValueData* value) {
+bool code_returnValue(ValueData* value, const YYLTYPE* tokenLoc) {
     const Object* retObj = object_ValueDataListPop(value);
-    if (!retObj) compilerLog("return (void)\n");
-    if (retObj && code_return(retObj)) return true;
+    if (!retObj) compilerLogAt(tokenLoc, "return (void)\n");
+    if (retObj && code_return(retObj, tokenLoc)) return true;
     object_ValueDataListFree(value);
     return false;
 }
@@ -275,13 +275,13 @@ void func_call(FuncCallInfo* funcCall, const Object* funcObj, ValueData* funcRet
         byteBufferWriteFormat(&callBuff, "%%reg%s = ", resultReg.name);
         const Object resultObj = (Object){OBJECT_TYPE_REGISTER, .value.symbol = cloneStruct(SymbolData, &resultReg)};
         linkedList_addp(&funcReturn->valueList, false, cloneStruct(Object, &resultObj));
-        compilerLog("call %s(%zu args) -> %s%s\n",
+        compilerLogAt(tokenLoc, "call %s(%zu args) -> %s%s\n",
                     funcObj->value.symbol->name,
                     funcCall->args.length,
                     object_print(&resultObj),
                     funcInfo->builtin ? " [builtin]" : "");
     } else {
-        compilerLog("call %s(%zu args)%s\n",
+        compilerLogAt(tokenLoc, "call %s(%zu args)%s\n",
                     funcObj->value.symbol->name,
                     funcCall->args.length,
                     funcInfo->builtin ? " [builtin]" : "");

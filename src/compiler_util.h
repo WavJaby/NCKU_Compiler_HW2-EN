@@ -68,7 +68,7 @@ extern int constStrCount;
 #define yyerroraf(format, ...) do {                                                                                 \
     compileError = true;                                                                                            \
     if (verbose) fprintf(stderr, "%s:%d\n", __FILE__, __LINE__);                                                    \
-    fprintf(stderr, ERROR_PREFIX format, inputFileRelativePath, yylineno, yylloc.first_column + 1, ##__VA_ARGS__);          \
+    fprintf(stderr, ERROR_PREFIX format, inputFileRelativePath, yylineno, yylloc.first_column, ##__VA_ARGS__);          \
     printErrorLine(&yylloc);                                                                                        \
     YYABORT;                                                                                                        \
 } while (0)
@@ -76,21 +76,21 @@ extern int constStrCount;
 #define yyerrorf(format, ...) do {                                                                                  \
     compileError = true;                                                                                            \
     if (verbose) fprintf(stderr, "%s:%d\n", __FILE__, __LINE__);                                                    \
-    fprintf(stderr, "%s" ERROR_PREFIX format "%s", COLOR_RED, inputFileRelativePath, yylineno, yylloc.first_column + 1, ##__VA_ARGS__, COLOR_RESET); \
+    fprintf(stderr, "%s" ERROR_PREFIX format "%s", COLOR_RED, inputFileRelativePath, yylineno, yylloc.first_column, ##__VA_ARGS__, COLOR_RESET); \
     printErrorLine(&yylloc);                                                                                        \
 } while (0)
 
 #define yyerrorlf(format, loc, ...) do {                                                                            \
     compileError = true;                                                                                            \
     if (verbose) fprintf(stderr, "%s:%d\n", __FILE__, __LINE__);                                                    \
-    fprintf(stderr, "%s" ERROR_PREFIX format "%s", COLOR_RED, inputFileRelativePath, (loc)->first_line, (loc)->first_column + 1, ##__VA_ARGS__, COLOR_RESET); \
+    fprintf(stderr, "%s" ERROR_PREFIX format "%s", COLOR_RED, inputFileRelativePath, (loc)->first_line, (loc)->first_column, ##__VA_ARGS__, COLOR_RESET); \
     printErrorLine(loc);                                                                                            \
 } while (0)
 
 #define yyerrortf(format, locA, locB, ...) do {                                                                     \
     compileError = true;                                                                                            \
     if (verbose) fprintf(stderr, "%s:%d\n", __FILE__, __LINE__);                                                    \
-    fprintf(stderr, "%s" ERROR_PREFIX format "%s", COLOR_RED, inputFileRelativePath, (locA)->first_line, (locA)->first_column + 1, ##__VA_ARGS__, COLOR_RESET); \
+    fprintf(stderr, "%s" ERROR_PREFIX format "%s", COLOR_RED, inputFileRelativePath, (locA)->first_line, (locA)->first_column, ##__VA_ARGS__, COLOR_RESET); \
     printTypeErrorLine(locA, locB);                                                                                 \
 } while (0)
 

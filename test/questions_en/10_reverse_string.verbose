@@ -1,45 +1,25 @@
-test/questions_en/10_reverse_string.wy:1:2     |> (scope id: 0, type: SCOPE_MAIN)
-test/questions_en/10_reverse_string.wy:7:41    |    var 「正讀」 <- "客上天然居"
-test/questions_en/10_reverse_string.wy:8:22    |    var 「長度」 <- 5
-test/questions_en/10_reverse_string.wy:11:23   |    var 「倒讀」 <- ""
-test/questions_en/10_reverse_string.wy:13:22   |    var 「甲」 <- 0
-test/questions_en/10_reverse_string.wy:14:1    |    > (while loop)
-test/questions_en/10_reverse_string.wy:14:1    |    > (scope id: 1, type: SCOPE_WHILE_LOOP)
-test/questions_en/10_reverse_string.wy:14:28   |        exp 「甲」 == 「長度」 -> reg<bool>
-test/questions_en/10_reverse_string.wy:14:28   |        > (if)
-test/questions_en/10_reverse_string.wy:14:28   |        > (scope id: 2, type: SCOPE_IF_STMT)
-test/questions_en/10_reverse_string.wy:14:34   |            break (loop1)
-test/questions_en/10_reverse_string.wy:14:40   |        < (scope id: 2, type: SCOPE_IF_STMT)
-test/questions_en/10_reverse_string.wy:14:40   |        < (if end)
-test/questions_en/10_reverse_string.wy:17:22   |        exp 「長度」 - 「甲」 -> reg<i32>
-test/questions_en/10_reverse_string.wy:17:30   |        var 「索引」 <- reg<i32>
-test/questions_en/10_reverse_string.wy:19:19   |        index 「正讀」[「索引」] -> reg<str>
-test/questions_en/10_reverse_string.wy:19:33   |        var 「單字」 <- reg<str>
-test/questions_en/10_reverse_string.wy:22:23   |        exp 「倒讀」 + 「單字」 -> reg<str>
-test/questions_en/10_reverse_string.wy:22:28   |        set 「倒讀」 <- reg<str>
-test/questions_en/10_reverse_string.wy:24:19   |        exp 1 + 「甲」 -> reg<i32>
-test/questions_en/10_reverse_string.wy:24:24   |        set 「甲」 <- reg<i32>
-test/questions_en/10_reverse_string.wy:25:1    |    < (scope id: 1, type: SCOPE_WHILE_LOOP)
-╔══════╦══════╦═══════╦══════╗
-║ Name ║ Type ║ Index ║ Func ║
-╠══════╬══════╬═══════╬══════╣
-║ 索引 ║ i32  ║ 4     ║      ║
-║ 單字 ║ str  ║ 5     ║      ║
-╚══════╩══════╩═══════╩══════╝
-test/questions_en/10_reverse_string.wy:25:1    |    < (while loop end)
-test/questions_en/10_reverse_string.wy:27:46   |    PRINT: "正向觀之："
-test/questions_en/10_reverse_string.wy:27:46   |    PRINT: 「正讀」
-test/questions_en/10_reverse_string.wy:28:46   |    PRINT: "倒向讀之："
-test/questions_en/10_reverse_string.wy:28:46   |    PRINT: 「倒讀」
-test/questions_en/10_reverse_string.wy:28:51   |< (scope id: 0, type: SCOPE_MAIN)
+test/questions_en/10_reverse_string.wy:1:1     |> (scope id: 0, type: SCOPE_MAIN)
+test/questions_en/10_reverse_string.wy:1:1: 錯誤: 謬字「NOTE」
+test/questions_en/10_reverse_string.wy:1:7: 錯誤: 謬字「[[」
+test/questions_en/10_reverse_string.wy:2:5: 錯誤: 謬字「斯篇專考」
+/home/bun/app/wenyan-llvm/src/scope.c:336
+test/questions_en/10_reverse_string.wy:2:9: 錯誤: 「字串加法」未嘗立名，無由識之
+     1 |NOTE  [[
+       |^~~~
+     2 |    斯篇專考「字串加法」與「字串取值」之機。
+     2 |NOTE  [[
+       |      ^~
+     3 |    斯篇專考「字串加法」與「字串取值」之機。
+     2 |    斯篇專考「字串加法」與「字串取值」之機。
+       |    ^~~~~~~~
+     3 |    以迴文倒敘之法，將字串逐字反轉，
+     2 |    斯篇專考「字串加法」與「字串取值」之機。
+       |            ^~~~~~~~~~~~
+     3 |    以迴文倒敘之法，將字串逐字反轉，
+test/questions_en/10_reverse_string.wy:2:9     |< (scope id: 0, type: SCOPE_MAIN)
 ╔════════╦══════╦═══════╦═════════╗
-║ Name   ║ Type ║ Index ║ Func    ║
+║ 名稱   ║ 型別 ║ Index ║ 術      ║
 ╠════════╬══════╬═══════╬═════════╣
-║ 冪     ║ func ║ -1    ║ builtin ║
-║ 平方根 ║ func ║ -1    ║ builtin ║
-║ 正讀   ║ str  ║ 0     ║         ║
-║ 長度   ║ i32  ║ 1     ║         ║
-║ 倒讀   ║ str  ║ 2     ║         ║
-║ 甲     ║ i32  ║ 3     ║         ║
+║ 冪     ║ 術   ║ -1    ║ builtin ║
+║ 平方根 ║ 術   ║ -1    ║ builtin ║
 ╚════════╩══════╩═══════╩═════════╝
-test/questions_en/10_reverse_string.wy:28:51   |total 28 lines

@@ -1,4 +1,4 @@
-test/策問/01_開物_定名.wy:1:2     |> (scope id: 0, type: SCOPE_MAIN)
+test/策問/01_開物_定名.wy:1:1     |> (scope id: 0, type: SCOPE_MAIN)
 test/策問/01_開物_定名.wy:8:12    |    var 「甲」 <- 1
 test/策問/01_開物_定名.wy:9:18    |    var 「唉呀」 <- "噫吁戲"
 test/策問/01_開物_定名.wy:10:12   |    var 「陰陽」 <- false

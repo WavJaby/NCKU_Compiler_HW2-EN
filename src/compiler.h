@@ -7,7 +7,7 @@ inline void yyerror(const char* format, ...) {
     va_list args;
     va_start(args, format);
 
-    fprintf(stderr, ERROR_PREFIX, inputFileRelativePath, yylloc.first_line, yylloc.first_column + 1);
+    fprintf(stderr, ERROR_PREFIX, inputFileRelativePath, yylloc.first_line, yylloc.first_column);
     vfprintf(stderr, format, args);
     fprintf(stderr, "\n");
     printErrorLine(&yylloc);

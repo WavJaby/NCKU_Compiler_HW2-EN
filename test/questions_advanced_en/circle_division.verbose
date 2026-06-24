@@ -1,94 +1,16 @@
-test/questions_advanced_en/circle_division.wy:1:2     |> (scope id: 0, type: SCOPE_MAIN)
-test/questions_advanced_en/circle_division.wy:3:33    |    var 「半徑」 <- 1
-test/questions_advanced_en/circle_division.wy:4:19    |    exp 「半徑」 * 「半徑」 -> reg<i32>
-test/questions_advanced_en/circle_division.wy:4:27    |    var 「半徑平方」 <- reg<i32>
-test/questions_advanced_en/circle_division.wy:6:24    |    > (function define: 求小弦)
-test/questions_advanced_en/circle_division.wy:6:24    |> (scope id: 0, type: SCOPE_FUNCTION)
-test/questions_advanced_en/circle_division.wy:6:66    |    > (function param: 裏觚之面, type: num)
-test/questions_advanced_en/circle_division.wy:6:81    |    > (function param: 輪數, type: num)
-test/questions_advanced_en/circle_division.wy:6:87    |    > (function start body)
-test/questions_advanced_en/circle_division.wy:7:21    |    exp 「裏觚之面」 / 2.0 -> reg<f64>
-test/questions_advanced_en/circle_division.wy:7:29    |    var 「半面」 <- reg<f64>
-test/questions_advanced_en/circle_division.wy:8:16    |    exp 「輪數」 < 1.0 -> reg<bool>
-test/questions_advanced_en/circle_division.wy:8:16    |    > (if)
-test/questions_advanced_en/circle_division.wy:8:16    |    > (scope id: 1, type: SCOPE_IF_STMT)
-test/questions_advanced_en/circle_division.wy:8:37    |        return 「裏觚之面」
-test/questions_advanced_en/circle_division.wy:8:37    |    < (scope id: 1, type: SCOPE_IF_STMT)
-test/questions_advanced_en/circle_division.wy:8:37    |    < (if end)
-test/questions_advanced_en/circle_division.wy:9:20    |    exp 「半面」 * 「半面」 -> reg<f64>
-test/questions_advanced_en/circle_division.wy:9:28    |    var 「半面平方」 <- reg<f64>
-test/questions_advanced_en/circle_division.wy:10:24   |    exp 「半徑平方」 - 「半面平方」 -> reg<f64>
-test/questions_advanced_en/circle_division.wy:10:39   |    call 平方根(1 args) -> reg<f64> [builtin]
-test/questions_advanced_en/circle_division.wy:10:54   |    var 「股」 <- reg<f64>
-test/questions_advanced_en/circle_division.wy:11:19   |    exp 「半徑」 - 「股」 -> reg<f64>
-test/questions_advanced_en/circle_division.wy:11:27   |    var 「小句」 <- reg<f64>
-test/questions_advanced_en/circle_division.wy:12:20   |    exp 「小句」 * 「小句」 -> reg<f64>
-test/questions_advanced_en/circle_division.wy:12:39   |    exp reg<f64> + 「半面平方」 -> reg<f64>
-test/questions_advanced_en/circle_division.wy:12:54   |    call 平方根(1 args) -> reg<f64> [builtin]
-test/questions_advanced_en/circle_division.wy:12:69   |    var 「小弦」 <- reg<f64>
-test/questions_advanced_en/circle_division.wy:13:51   |    exp 「輪數」 - 1 -> reg<f64>
-test/questions_advanced_en/circle_division.wy:13:66   |    call 求小弦(2 args) -> reg<f64>
-test/questions_advanced_en/circle_division.wy:13:73   |    return reg<f64>
-test/questions_advanced_en/circle_division.wy:14:20   |    < (function end: 求小弦)
-test/questions_advanced_en/circle_division.wy:14:20   |< (scope id: 0, type: SCOPE_FUNCTION)
-╔══════════╦══════╦═══════╦══════╗
-║ Name     ║ Type ║ Index ║ Func ║
-╠══════════╬══════╬═══════╬══════╣
-║ 裏觚之面 ║ f64  ║ 0     ║      ║
-║ 輪數     ║ f64  ║ 1     ║      ║
-║ 半面     ║ f64  ║ 2     ║      ║
-║ 半面平方 ║ f64  ║ 3     ║      ║
-║ 股       ║ f64  ║ 4     ║      ║
-║ 小句     ║ f64  ║ 5     ║      ║
-║ 小弦     ║ f64  ║ 6     ║      ║
-╚══════════╩══════╩═══════╩══════╝
-test/questions_advanced_en/circle_division.wy:17:24   |    > (function define: 割圓術求圓率)
-test/questions_advanced_en/circle_division.wy:17:24   |> (scope id: 0, type: SCOPE_FUNCTION)
-test/questions_advanced_en/circle_division.wy:17:68   |    > (function param: 原輪數, type: num)
-test/questions_advanced_en/circle_division.wy:17:75   |    > (function start body)
-test/questions_advanced_en/circle_division.wy:18:18   |    exp 「原輪數」 - 1 -> reg<i32>
-test/questions_advanced_en/circle_division.wy:18:26   |    var 「輪數」 <- reg<i32>
-test/questions_advanced_en/circle_division.wy:19:25   |    call 冪(2 args) -> reg<f64> [builtin]
-test/questions_advanced_en/circle_division.wy:19:39   |    exp reg<f64> * 6 -> reg<f64>
-test/questions_advanced_en/circle_division.wy:19:47   |    var 「觚數」 <- reg<f64>
-test/questions_advanced_en/circle_division.wy:20:30   |    call 求小弦(2 args) -> reg<f64>
-test/questions_advanced_en/circle_division.wy:20:38   |    var 「小弦」 <- reg<f64>
-test/questions_advanced_en/circle_division.wy:21:20   |    exp 「小弦」 * 「觚數」 -> reg<f64>
-test/questions_advanced_en/circle_division.wy:21:28   |    var 「觚周」 <- reg<f64>
-test/questions_advanced_en/circle_division.wy:22:17   |    exp 「觚周」 / 2 -> reg<f64>
-test/questions_advanced_en/circle_division.wy:22:34   |    exp reg<f64> * 「半徑」 -> reg<f64>
-test/questions_advanced_en/circle_division.wy:22:42   |    var 「觚冪」 <- reg<f64>
-test/questions_advanced_en/circle_division.wy:23:22   |    exp 「觚冪」 / 「半徑平方」 -> reg<f64>
-test/questions_advanced_en/circle_division.wy:23:30   |    var 「圓率」 <- reg<f64>
-test/questions_advanced_en/circle_division.wy:24:65   |    PRINT: "割圓"
-test/questions_advanced_en/circle_division.wy:24:65   |    PRINT: 「觚數」
-test/questions_advanced_en/circle_division.wy:24:65   |    PRINT: "觚。所得圓率者。"
-test/questions_advanced_en/circle_division.wy:25:44   |    PRINT: 「圓率」
-test/questions_advanced_en/circle_division.wy:25:44   |    PRINT: "也。"
-test/questions_advanced_en/circle_division.wy:27:1    |    return 「圓率」
-test/questions_advanced_en/circle_division.wy:27:23   |    < (function end: 割圓術求圓率)
-test/questions_advanced_en/circle_division.wy:27:23   |< (scope id: 0, type: SCOPE_FUNCTION)
-╔════════╦══════╦═══════╦══════╗
-║ Name   ║ Type ║ Index ║ Func ║
-╠════════╬══════╬═══════╬══════╣
-║ 原輪數 ║ i32  ║ 0     ║      ║
-║ 輪數   ║ i32  ║ 1     ║      ║
-║ 觚數   ║ f64  ║ 2     ║      ║
-║ 小弦   ║ f64  ║ 3     ║      ║
-║ 觚周   ║ f64  ║ 4     ║      ║
-║ 觚冪   ║ f64  ║ 5     ║      ║
-║ 圓率   ║ f64  ║ 6     ║      ║
-╚════════╩══════╩═══════╩══════╝
-test/questions_advanced_en/circle_division.wy:30:21   |    call 割圓術求圓率(1 args) -> reg<f64>
-test/questions_advanced_en/circle_division.wy:30:21   |< (scope id: 0, type: SCOPE_MAIN)
-╔══════════════╦══════╦═══════╦═════════╗
-║ Name         ║ Type ║ Index ║ Func    ║
-╠══════════════╬══════╬═══════╬═════════╣
-║ 冪           ║ func ║ -1    ║ builtin ║
-║ 平方根       ║ func ║ -1    ║ builtin ║
-║ 半徑         ║ i32  ║ 0     ║         ║
-║ 半徑平方     ║ i32  ║ 1     ║         ║
-║ 求小弦       ║ func ║ 2     ║ ctx:1   ║
-║ 割圓術求圓率 ║ func ║ 3     ║ ctx:2   ║
-╚══════════════╩══════╩═══════╩═════════╝
-test/questions_advanced_en/circle_division.wy:30:21   |total 30 lines
+test/questions_advanced_en/circle_division.wy:1:1     |> (scope id: 0, type: SCOPE_MAIN)
+test/questions_advanced_en/circle_division.wy:1:1: 錯誤: 謬字「NOTE」
+test/questions_advanced_en/circle_division.wy:1:10: 錯誤: 忽逢VAR_TYPE_FUNC，殊非所期，當得end of file
+     1 |NOTE [[割圓術始載於劉徽所著九章算術注]]
+       |^~~~
+     2 |
+     1 |NOTE [[割圓術始載於劉徽所著九章算術注]]
+       |           ^~
+     2 |
+test/questions_advanced_en/circle_division.wy:1:10    |< (scope id: 0, type: SCOPE_MAIN)
+╔════════╦══════╦═══════╦═════════╗
+║ 名稱   ║ 型別 ║ Index ║ 術      ║
+╠════════╬══════╬═══════╬═════════╣
+║ 冪     ║ 術   ║ -1    ║ builtin ║
+║ 平方根 ║ 術   ║ -1    ║ builtin ║
+╚════════╩══════╩═══════╩═════════╝

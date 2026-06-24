@@ -1,4 +1,4 @@
-test/策問/02_流轉_易值.wy:1:2     |> (scope id: 0, type: SCOPE_MAIN)
+test/策問/02_流轉_易值.wy:1:1     |> (scope id: 0, type: SCOPE_MAIN)
 test/策問/02_流轉_易值.wy:7:9     |    var 「零」 <- 0
 test/策問/02_流轉_易值.wy:7:14    |    var 「無」 <- 0
 test/策問/02_流轉_易值.wy:8:7     |    var 「否」 <- false

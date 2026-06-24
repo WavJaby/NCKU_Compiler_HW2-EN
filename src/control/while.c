@@ -33,7 +33,7 @@ bool code_whileLoopEnd(Object* obj) {
     return false;
 }
 
-bool code_break() {
+bool code_break(const YYLTYPE* tokenLoc) {
     // TODO: break out of the nearest enclosing loop
     //
     // Before implementing, read:
@@ -46,7 +46,9 @@ bool code_break() {
     // Implementation (~4 lines):
     //   - find the nearest enclosing loop scope
     //   - if not inside a loop, report an error and return true
-    //   - emit a compilerLog break message
+    //   - emit a compilerLogAt(tokenLoc, ...) break message (not compilerLog --
+    //     by now the global yylloc may already have been advanced by lookahead
+    //     into the next statement)
     //   - emit a br to the exit label
     return false;
 }

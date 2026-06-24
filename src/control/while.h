@@ -12,6 +12,6 @@ typedef struct {
 
 bool code_whileLoopStart();
 bool code_whileLoopEnd(Object* obj);
-bool code_break();
+bool code_break(const YYLTYPE* tokenLoc);
 
 #endif //WENYAN_LLVM_WHILE_H

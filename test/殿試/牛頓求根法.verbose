@@ -1,4 +1,4 @@
-test/殿試/牛頓求根法.wy:1:2     |> (scope id: 0, type: SCOPE_MAIN)
+test/殿試/牛頓求根法.wy:1:1     |> (scope id: 0, type: SCOPE_MAIN)
 test/殿試/牛頓求根法.wy:1:9     |    > (function define: 牛頓求根法)
 test/殿試/牛頓求根法.wy:1:9     |> (scope id: 0, type: SCOPE_FUNCTION)
 test/殿試/牛頓求根法.wy:1:29    |    > (function param: 試, type: 數)
@@ -7,14 +7,14 @@ test/殿試/牛頓求根法.wy:3:14    |    var 「甲」 <- 1.0e+00
 test/殿試/牛頓求根法.wy:4:14    |    var 「乙」 <- 1.0e+00
 test/殿試/牛頓求根法.wy:5:10    |    > (for loop, count: 「試」)
 test/殿試/牛頓求根法.wy:5:10    |    > (scope id: 1, type: SCOPE_FOR_LOOP)
-test/殿試/牛頓求根法.wy:7:18    |        exp 「甲」 * 「甲」 -> reg<浮數>
-test/殿試/牛頓求根法.wy:7:23    |        exp reg<浮數> - 2 -> reg<浮數>
+test/殿試/牛頓求根法.wy:7:9     |        exp 「甲」 * 「甲」 -> reg<浮數>
+test/殿試/牛頓求根法.wy:7:18    |        exp reg<浮數> - 2 -> reg<浮數>
 test/殿試/牛頓求根法.wy:7:25    |        set 「乙」 <- reg<浮數>
-test/殿試/牛頓求根法.wy:9:16    |        exp 「甲」 * 2 -> reg<浮數>
+test/殿試/牛頓求根法.wy:9:9     |        exp 「甲」 * 2 -> reg<浮數>
 test/殿試/牛頓求根法.wy:9:19    |        var 「丙」 <- reg<浮數>
-test/殿試/牛頓求根法.wy:11:18   |        exp 「乙」 / 「丙」 -> reg<浮數>
+test/殿試/牛頓求根法.wy:11:9    |        exp 「乙」 / 「丙」 -> reg<浮數>
 test/殿試/牛頓求根法.wy:11:21   |        var 「茂」 <- reg<浮數>
-test/殿試/牛頓求根法.wy:13:18   |        exp 「甲」 - 「茂」 -> reg<浮數>
+test/殿試/牛頓求根法.wy:13:9    |        exp 「甲」 - 「茂」 -> reg<浮數>
 test/殿試/牛頓求根法.wy:13:20   |        set 「甲」 <- reg<浮數>
 test/殿試/牛頓求根法.wy:14:5    |    < (scope id: 1, type: SCOPE_FOR_LOOP)
 ╔══════╦══════╦═══════╦════╗
@@ -24,7 +24,7 @@ test/殿試/牛頓求根法.wy:14:5    |    < (scope id: 1, type: SCOPE_FOR_LOOP
 ║ 茂   ║ 浮數 ║ 4     ║    ║
 ╚══════╩══════╩═══════╩════╝
 test/殿試/牛頓求根法.wy:14:5    |    < (for loop end)
-test/殿試/牛頓求根法.wy:16:1    |    return 「甲」
+test/殿試/牛頓求根法.wy:15:5    |    return 「甲」
 test/殿試/牛頓求根法.wy:16:10   |    < (function end: 牛頓求根法)
 test/殿試/牛頓求根法.wy:16:10   |< (scope id: 0, type: SCOPE_FUNCTION)
 ╔══════╦══════╦═══════╦════╗
@@ -34,7 +34,7 @@ test/殿試/牛頓求根法.wy:16:10   |< (scope id: 0, type: SCOPE_FUNCTION)
 ║ 甲   ║ 浮數 ║ 1     ║    ║
 ║ 乙   ║ 浮數 ║ 2     ║    ║
 ╚══════╩══════╩═══════╩════╝
-test/殿試/牛頓求根法.wy:18:17   |    call 牛頓求根法(1 args) -> reg<浮數>
+test/殿試/牛頓求根法.wy:18:2    |    call 牛頓求根法(1 args) -> reg<浮數>
 test/殿試/牛頓求根法.wy:18:17   |    PRINT: reg<浮數>
 test/殿試/牛頓求根法.wy:18:19   |< (scope id: 0, type: SCOPE_MAIN)
 ╔════════════╦══════╦═══════╦═════════╗

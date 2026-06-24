@@ -1,12 +1,62 @@
-test/questions_en/00_quick_start.wy:1:2     |> (scope id: 0, type: SCOPE_MAIN)
-test/questions_en/00_quick_start.wy:1:33    |    var 「甲」 <- 1
-test/questions_en/00_quick_start.wy:2:27    |    PRINT: 「甲」
+test/questions_en/00_quick_start.wy:1:1     |> (scope id: 0, type: SCOPE_MAIN)
+test/questions_en/00_quick_start.wy:1:1: 錯誤: 謬字「i」
+test/questions_en/00_quick_start.wy:1:3: 錯誤: 謬字「have」
+test/questions_en/00_quick_start.wy:1:8: 錯誤: 謬字「1」
+test/questions_en/00_quick_start.wy:1:10: 錯誤: 謬字「num.」
+test/questions_en/00_quick_start.wy:1:15: 錯誤: 謬字「called」
+test/questions_en/00_quick_start.wy:1:22: 錯誤: 謬字「1.」
+test/questions_en/00_quick_start.wy:1:25: 錯誤: 謬字「name」
+test/questions_en/00_quick_start.wy:1:30: 錯誤: 謬字「it」
+test/questions_en/00_quick_start.wy:1:33: 錯誤: 謬字「[甲].」
+     1 |i have 1 num. called 1. name it [甲].
+       |^
+     2 |i have 1 num. called [甲]. print.
+     1 |i have 1 num. called 1. name it [甲].
+       |  ^~~~
+     2 |i have 1 num. called [甲]. print.
+     1 |i have 1 num. called 1. name it [甲].
+       |       ^
+     2 |i have 1 num. called [甲]. print.
+     1 |i have 1 num. called 1. name it [甲].
+       |         ^~~~
+     2 |i have 1 num. called [甲]. print.
+     1 |i have 1 num. called 1. name it [甲].
+       |              ^~~~~~
+     2 |i have 1 num. called [甲]. print.
+     1 |i have 1 num. called 1. name it [甲].
+       |                     ^~
+     2 |i have 1 num. called [甲]. print.
+     1 |i have 1 num. called 1. name it [甲].
+       |                        ^~~~
+     2 |i have 1 num. called [甲]. print.
+     1 |i have 1 num. called 1. name it [甲].
+       |                             ^~
+     2 |i have 1 num. called [甲]. print.
+     2 |i have 1 num. called 1. name it [甲].
+       |                                ^~~~~
+     3 |i have 1 num. called [甲]. print.test/questions_en/00_quick_start.wy:2:1: 錯誤: 謬字「i」
+test/questions_en/00_quick_start.wy:2:3: 錯誤: 謬字「have」
+test/questions_en/00_quick_start.wy:2:8: 錯誤: 謬字「1」
+test/questions_en/00_quick_start.wy:2:10: 錯誤: 謬字「num.」
+test/questions_en/00_quick_start.wy:2:15: 錯誤: 謬字「called」
+test/questions_en/00_quick_start.wy:2:22: 錯誤: 謬字「[甲].」
+
+     2 |i have 1 num. called [甲]. print.
+       |^
+     2 |i have 1 num. called [甲]. print.
+       |  ^~~~
+     2 |i have 1 num. called [甲]. print.
+       |       ^
+     2 |i have 1 num. called [甲]. print.
+       |         ^~~~
+     2 |i have 1 num. called [甲]. print.
+       |              ^~~~~~
+     2 |i have 1 num. called [甲]. print.
+       |                     ^~~~~
 test/questions_en/00_quick_start.wy:3:33    |< (scope id: 0, type: SCOPE_MAIN)
 ╔════════╦══════╦═══════╦═════════╗
-║ Name   ║ Type ║ Index ║ Func    ║
+║ 名稱   ║ 型別 ║ Index ║ 術      ║
 ╠════════╬══════╬═══════╬═════════╣
-║ 冪     ║ func ║ -1    ║ builtin ║
-║ 平方根 ║ func ║ -1    ║ builtin ║
-║ 甲     ║ i32  ║ 0     ║         ║
+║ 冪     ║ 術   ║ -1    ║ builtin ║
+║ 平方根 ║ 術   ║ -1    ║ builtin ║
 ╚════════╩══════╩═══════╩═════════╝
-test/questions_en/00_quick_start.wy:3:33    |total 3 lines

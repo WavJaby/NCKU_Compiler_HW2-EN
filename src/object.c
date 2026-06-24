@@ -415,7 +415,7 @@ Object object_getIndex(const Object* obj, const Object* index, const YYLTYPE* ob
     if (obj->type == OBJECT_TYPE_SYMBOL) object_free(&regObj);
     if (index->type == OBJECT_TYPE_SYMBOL) object_free(&regIndex);
     if (result.type != OBJECT_TYPE_UNDEFINED)
-        compilerLog("index %s[%s] -> %s\n", object_print(obj), object_print(index), object_print(&result));
+        compilerLogAt(objLoc, "index %s[%s] -> %s\n", object_print(obj), object_print(index), object_print(&result));
     return result;
 }
 

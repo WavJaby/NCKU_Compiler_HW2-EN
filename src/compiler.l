@@ -11,12 +11,13 @@
     #define YY_NO_UNPUT
     #define YY_NO_INPUT
 
-    int yycolumn, yyoffset, yycolumnUtf8, yylengUtf8;
+    int yycolumn, yyoffset, yycolumnUtf8 = 1, yylengUtf8;
     utf8_string yytextUtf8;
 
     static inline void updateNewline() {
         yylloc.first_line = yylineno;
-        yycolumn = yycolumnUtf8 = 0;
+        yycolumn = 0;
+        yycolumnUtf8 = 1;
     }
 
     static inline void processUtf8Char() {
