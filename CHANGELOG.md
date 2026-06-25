@@ -63,3 +63,11 @@ If you've already written `ReturnStmt`/`code_break`/expression rules, the merge 
 3. Rebuild and rerun `test/test.sh` to confirm nothing broke
 
 If you'd rather not use `git merge`, you can also just manually add the parameters per the table above — the diff per call site is small (one extra argument).
+
+> **Note**: if `git fetch && git merge` refuses outright with `unrelated histories` — the repo was still being edited those first few days and got force-pushed, so use `cherry-pick` instead:
+> ```bash
+> git remote add upstream git@github.com:WavJaby/NCKU_Compiler_HW2-EN.git   # skip if already added
+> git fetch upstream
+> git cherry-pick b97f6a4..upstream/master
+> # resolve any conflicts, then: git add -A && git cherry-pick --continue
+> ```
