@@ -1,20 +1,71 @@
 test/questions_en/11_array.wy:1:1     |> (scope id: 0, type: SCOPE_MAIN)
-test/questions_en/11_array.wy:1:1: 錯誤: 謬字「NOTE」
-test/questions_en/11_array.wy:1:7: 錯誤: 謬字「[[」
-test/questions_en/11_array.wy:2:10: 錯誤: 忽逢 類 ，殊非所期，當得end of file
-     1 |NOTE  [[
-       |^~~~
-     2 |    斯篇專試陣列「充」、「之長」與「迴圈取值」之機巧。
-     2 |NOTE  [[
-       |      ^~
-     3 |    斯篇專試陣列「充」、「之長」與「迴圈取值」之機巧。
-     2 |    斯篇專試陣列「充」、「之長」與「迴圈取值」之機巧。
-       |              ^~
-     3 |    不涉拼接、陣列易值、其一、其餘與凡字走訪，
-test/questions_en/11_array.wy:2:10    |< (scope id: 0, type: SCOPE_MAIN)
-╔════════╦══════╦═══════╦═════════╗
-║ 名稱   ║ 型別 ║ Index ║ 術      ║
-╠════════╬══════╬═══════╬═════════╣
-║ 冪     ║ 術   ║ -1    ║ builtin ║
-║ 平方根 ║ 術   ║ -1    ║ builtin ║
-╚════════╩══════╩═══════╩═════════╝
+test/questions_en/11_array.wy:7:24    |    var 「五音」 <- reg<list>
+test/questions_en/11_array.wy:8:14    |    push 「五音」 <- "宮"
+test/questions_en/11_array.wy:8:24    |    push 「五音」 <- "商"
+test/questions_en/11_array.wy:8:34    |    push 「五音」 <- "角"
+test/questions_en/11_array.wy:8:44    |    push 「五音」 <- "徵"
+test/questions_en/11_array.wy:8:54    |    push 「五音」 <- "羽"
+test/questions_en/11_array.wy:10:24   |    var 「四象」 <- reg<list>
+test/questions_en/11_array.wy:11:14   |    push 「四象」 <- "青龍"
+test/questions_en/11_array.wy:11:25   |    push 「四象」 <- "白虎"
+test/questions_en/11_array.wy:11:36   |    push 「四象」 <- "朱雀"
+test/questions_en/11_array.wy:11:47   |    push 「四象」 <- "玄武"
+test/questions_en/11_array.wy:13:24   |    var 「天地萬象」 <- reg<list>
+test/questions_en/11_array.wy:14:16   |    push 「天地萬象」 <- 「五音」
+test/questions_en/11_array.wy:14:25   |    push 「天地萬象」 <- 「四象」
+test/questions_en/11_array.wy:16:36   |    PRINT: "五音之長，計有："
+test/questions_en/11_array.wy:17:1    |    length 「五音」 -> reg<i64>
+test/questions_en/11_array.wy:17:20   |    PRINT: reg<i64>
+test/questions_en/11_array.wy:19:36   |    PRINT: "四象之長，計有："
+test/questions_en/11_array.wy:20:1    |    length 「四象」 -> reg<i64>
+test/questions_en/11_array.wy:20:20   |    PRINT: reg<i64>
+test/questions_en/11_array.wy:22:44   |    PRINT: "天地萬象之長（內含幾列），計有："
+test/questions_en/11_array.wy:23:1    |    length 「天地萬象」 -> reg<i64>
+test/questions_en/11_array.wy:23:22   |    PRINT: reg<i64>
+test/questions_en/11_array.wy:26:41   |    PRINT: "以迴圈逐一取五音列中之物："
+test/questions_en/11_array.wy:28:22   |    var 「甲」 <- 1
+test/questions_en/11_array.wy:29:1    |    > (while loop)
+test/questions_en/11_array.wy:29:1    |    > (scope id: 1, type: SCOPE_WHILE_LOOP)
+test/questions_en/11_array.wy:29:22   |        length 「五音」 -> reg<i64>
+test/questions_en/11_array.wy:29:16   |        exp 「甲」 > reg<i64> -> reg<bool>
+test/questions_en/11_array.wy:29:34   |        > (if)
+test/questions_en/11_array.wy:29:34   |        > (scope id: 2, type: SCOPE_IF_STMT)
+test/questions_en/11_array.wy:29:41   |            break (loop1)
+test/questions_en/11_array.wy:29:47   |        < (scope id: 2, type: SCOPE_IF_STMT)
+test/questions_en/11_array.wy:29:47   |        < (if end)
+test/questions_en/11_array.wy:30:11   |        index 「五音」[「甲」] -> reg<str>
+test/questions_en/11_array.wy:30:24   |        PRINT: reg<str>
+test/questions_en/11_array.wy:31:5    |        exp 「甲」 + 1 -> reg<i32>
+test/questions_en/11_array.wy:31:24   |        set 「甲」 <- reg<i32>
+test/questions_en/11_array.wy:32:1    |    < (scope id: 1, type: SCOPE_WHILE_LOOP)
+test/questions_en/11_array.wy:32:1    |    < (while loop end)
+test/questions_en/11_array.wy:34:41   |    PRINT: "以迴圈逐一取四象列中之物："
+test/questions_en/11_array.wy:36:22   |    var 「乙」 <- 1
+test/questions_en/11_array.wy:37:1    |    > (while loop)
+test/questions_en/11_array.wy:37:1    |    > (scope id: 3, type: SCOPE_WHILE_LOOP)
+test/questions_en/11_array.wy:37:22   |        length 「四象」 -> reg<i64>
+test/questions_en/11_array.wy:37:16   |        exp 「乙」 > reg<i64> -> reg<bool>
+test/questions_en/11_array.wy:37:34   |        > (if)
+test/questions_en/11_array.wy:37:34   |        > (scope id: 4, type: SCOPE_IF_STMT)
+test/questions_en/11_array.wy:37:41   |            break (loop3)
+test/questions_en/11_array.wy:37:47   |        < (scope id: 4, type: SCOPE_IF_STMT)
+test/questions_en/11_array.wy:37:47   |        < (if end)
+test/questions_en/11_array.wy:38:11   |        index 「四象」[「乙」] -> reg<str>
+test/questions_en/11_array.wy:38:24   |        PRINT: reg<str>
+test/questions_en/11_array.wy:39:5    |        exp 「乙」 + 1 -> reg<i32>
+test/questions_en/11_array.wy:39:24   |        set 「乙」 <- reg<i32>
+test/questions_en/11_array.wy:40:1    |    < (scope id: 3, type: SCOPE_WHILE_LOOP)
+test/questions_en/11_array.wy:40:1    |    < (while loop end)
+test/questions_en/11_array.wy:40:4    |< (scope id: 0, type: SCOPE_MAIN)
+╔══════════╦══════╦═══════╦═════════╗
+║ Name     ║ Type ║ Index ║ Func    ║
+╠══════════╬══════╬═══════╬═════════╣
+║ 冪       ║ func ║ -1    ║ builtin ║
+║ 平方根   ║ func ║ -1    ║ builtin ║
+║ 五音     ║ list ║ 0     ║         ║
+║ 四象     ║ list ║ 1     ║         ║
+║ 天地萬象 ║ list ║ 2     ║         ║
+║ 甲       ║ i32  ║ 3     ║         ║
+║ 乙       ║ i32  ║ 4     ║         ║
+╚══════════╩══════╩═══════╩═════════╝
+test/questions_en/11_array.wy:40:4    |total 40 lines

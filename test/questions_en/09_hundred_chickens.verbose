@@ -1,25 +1,90 @@
 test/questions_en/09_hundred_chickens.wy:1:1     |> (scope id: 0, type: SCOPE_MAIN)
-test/questions_en/09_hundred_chickens.wy:1:1: 錯誤: 謬字「NOTE」
-test/questions_en/09_hundred_chickens.wy:1:7: 錯誤: 謬字「[[」
-test/questions_en/09_hundred_chickens.wy:2:5: 錯誤: 謬字「斯篇專演」
-/home/bun/app/wenyan-llvm/src/scope.c:336
-test/questions_en/09_hundred_chickens.wy:2:9: 錯誤: 「循環」未嘗立名，無由識之
-     1 |NOTE  [[
-       |^~~~
-     2 |    斯篇專演「循環」與「明斷」之妙用。
-     2 |NOTE  [[
-       |      ^~
-     3 |    斯篇專演「循環」與「明斷」之妙用。
-     2 |    斯篇專演「循環」與「明斷」之妙用。
-       |    ^~~~~~~~
-     3 |    借《張丘建算經》之「百錢買百雞」題，
-     2 |    斯篇專演「循環」與「明斷」之妙用。
-       |            ^~~~~~~~
-     3 |    借《張丘建算經》之「百錢買百雞」題，
-test/questions_en/09_hundred_chickens.wy:2:9     |< (scope id: 0, type: SCOPE_MAIN)
+test/questions_en/09_hundred_chickens.wy:7:54    |    PRINT: "今有雞翁一，值錢五；雞母一，值錢三；雞雛三，值錢一。"
+test/questions_en/09_hundred_chickens.wy:8:47    |    PRINT: "凡百錢買雞百隻，問雞翁、母、雛各幾何？"
+test/questions_en/09_hundred_chickens.wy:10:24   |    var 「百」 <- 100
+test/questions_en/09_hundred_chickens.wy:11:22   |    var 「翁」 <- 0
+test/questions_en/09_hundred_chickens.wy:14:1    |    > (while loop)
+test/questions_en/09_hundred_chickens.wy:14:1    |    > (scope id: 1, type: SCOPE_WHILE_LOOP)
+test/questions_en/09_hundred_chickens.wy:14:16   |        exp 「翁」 > 20 -> reg<bool>
+test/questions_en/09_hundred_chickens.wy:14:25   |        > (if)
+test/questions_en/09_hundred_chickens.wy:14:25   |        > (scope id: 2, type: SCOPE_IF_STMT)
+test/questions_en/09_hundred_chickens.wy:14:31   |            break (loop1)
+test/questions_en/09_hundred_chickens.wy:14:37   |        < (scope id: 2, type: SCOPE_IF_STMT)
+test/questions_en/09_hundred_chickens.wy:14:37   |        < (if end)
+test/questions_en/09_hundred_chickens.wy:16:26   |        var 「母」 <- 0
+test/questions_en/09_hundred_chickens.wy:18:5    |        > (while loop)
+test/questions_en/09_hundred_chickens.wy:18:5    |        > (scope id: 3, type: SCOPE_WHILE_LOOP)
+test/questions_en/09_hundred_chickens.wy:18:20   |            exp 「母」 > 33 -> reg<bool>
+test/questions_en/09_hundred_chickens.wy:18:29   |            > (if)
+test/questions_en/09_hundred_chickens.wy:18:29   |            > (scope id: 4, type: SCOPE_IF_STMT)
+test/questions_en/09_hundred_chickens.wy:18:35   |                break (loop3)
+test/questions_en/09_hundred_chickens.wy:18:41   |            < (scope id: 4, type: SCOPE_IF_STMT)
+test/questions_en/09_hundred_chickens.wy:18:41   |            < (if end)
+test/questions_en/09_hundred_chickens.wy:21:9    |            exp 「百」 - 「翁」 -> reg<i32>
+test/questions_en/09_hundred_chickens.wy:21:25   |            exp reg<i32> - 「母」 -> reg<i32>
+test/questions_en/09_hundred_chickens.wy:21:49   |            var 「雛」 <- reg<i32>
+test/questions_en/09_hundred_chickens.wy:24:9    |            exp 「雛」 % 3 -> reg<i32>
+test/questions_en/09_hundred_chickens.wy:24:36   |            var 「雛餘」 <- reg<i32>
+test/questions_en/09_hundred_chickens.wy:26:12   |            exp 「雛餘」 == 0 -> reg<bool>
+test/questions_en/09_hundred_chickens.wy:26:22   |            > (if)
+test/questions_en/09_hundred_chickens.wy:26:22   |            > (scope id: 5, type: SCOPE_IF_STMT)
+test/questions_en/09_hundred_chickens.wy:28:13   |                exp 「翁」 * 5 -> reg<i32>
+test/questions_en/09_hundred_chickens.wy:28:35   |                var 「翁價」 <- reg<i32>
+test/questions_en/09_hundred_chickens.wy:29:13   |                exp 「母」 * 3 -> reg<i32>
+test/questions_en/09_hundred_chickens.wy:29:35   |                var 「母價」 <- reg<i32>
+test/questions_en/09_hundred_chickens.wy:30:13   |                exp 「雛」 / 3 -> reg<i32>
+test/questions_en/09_hundred_chickens.wy:30:35   |                var 「雛價」 <- reg<i32>
+test/questions_en/09_hundred_chickens.wy:32:13   |                exp 「翁價」 + 「母價」 -> reg<i32>
+test/questions_en/09_hundred_chickens.wy:32:31   |                exp reg<i32> + 「雛價」 -> reg<i32>
+test/questions_en/09_hundred_chickens.wy:32:56   |                var 「總價」 <- reg<i32>
+test/questions_en/09_hundred_chickens.wy:34:16   |                exp 「總價」 == 「百」 -> reg<bool>
+test/questions_en/09_hundred_chickens.wy:34:28   |                > (if)
+test/questions_en/09_hundred_chickens.wy:34:28   |                > (scope id: 6, type: SCOPE_IF_STMT)
+test/questions_en/09_hundred_chickens.wy:39:36   |                    PRINT: "得解：翁"
+test/questions_en/09_hundred_chickens.wy:39:36   |                    PRINT: 「翁」
+test/questions_en/09_hundred_chickens.wy:39:36   |                    PRINT: "隻，母"
+test/questions_en/09_hundred_chickens.wy:39:36   |                    PRINT: 「母」
+test/questions_en/09_hundred_chickens.wy:39:36   |                    PRINT: "隻，雛"
+test/questions_en/09_hundred_chickens.wy:39:36   |                    PRINT: 「雛」
+test/questions_en/09_hundred_chickens.wy:39:36   |                    PRINT: "隻。"
+test/questions_en/09_hundred_chickens.wy:40:13   |                < (scope id: 6, type: SCOPE_IF_STMT)
+test/questions_en/09_hundred_chickens.wy:40:13   |                < (if end)
+test/questions_en/09_hundred_chickens.wy:41:9    |            < (scope id: 5, type: SCOPE_IF_STMT)
+╔══════╦══════╦═══════╦══════╗
+║ Name ║ Type ║ Index ║ Func ║
+╠══════╬══════╬═══════╬══════╣
+║ 翁價 ║ i32  ║ 5     ║      ║
+║ 母價 ║ i32  ║ 6     ║      ║
+║ 雛價 ║ i32  ║ 7     ║      ║
+║ 總價 ║ i32  ║ 8     ║      ║
+╚══════╩══════╩═══════╩══════╝
+test/questions_en/09_hundred_chickens.wy:41:9    |            < (if end)
+test/questions_en/09_hundred_chickens.wy:43:9    |            exp 「母」 + 1 -> reg<i32>
+test/questions_en/09_hundred_chickens.wy:43:28   |            set 「母」 <- reg<i32>
+test/questions_en/09_hundred_chickens.wy:44:5    |        < (scope id: 3, type: SCOPE_WHILE_LOOP)
+╔══════╦══════╦═══════╦══════╗
+║ Name ║ Type ║ Index ║ Func ║
+╠══════╬══════╬═══════╬══════╣
+║ 雛   ║ i32  ║ 3     ║      ║
+║ 雛餘 ║ i32  ║ 4     ║      ║
+╚══════╩══════╩═══════╩══════╝
+test/questions_en/09_hundred_chickens.wy:44:5    |        < (while loop end)
+test/questions_en/09_hundred_chickens.wy:46:5    |        exp 「翁」 + 1 -> reg<i32>
+test/questions_en/09_hundred_chickens.wy:46:24   |        set 「翁」 <- reg<i32>
+test/questions_en/09_hundred_chickens.wy:47:1    |    < (scope id: 1, type: SCOPE_WHILE_LOOP)
+╔══════╦══════╦═══════╦══════╗
+║ Name ║ Type ║ Index ║ Func ║
+╠══════╬══════╬═══════╬══════╣
+║ 母   ║ i32  ║ 2     ║      ║
+╚══════╩══════╩═══════╩══════╝
+test/questions_en/09_hundred_chickens.wy:47:1    |    < (while loop end)
+test/questions_en/09_hundred_chickens.wy:47:4    |< (scope id: 0, type: SCOPE_MAIN)
 ╔════════╦══════╦═══════╦═════════╗
-║ 名稱   ║ 型別 ║ Index ║ 術      ║
+║ Name   ║ Type ║ Index ║ Func    ║
 ╠════════╬══════╬═══════╬═════════╣
-║ 冪     ║ 術   ║ -1    ║ builtin ║
-║ 平方根 ║ 術   ║ -1    ║ builtin ║
+║ 冪     ║ func ║ -1    ║ builtin ║
+║ 平方根 ║ func ║ -1    ║ builtin ║
+║ 百     ║ i32  ║ 0     ║         ║
+║ 翁     ║ i32  ║ 1     ║         ║
 ╚════════╩══════╩═══════╩═════════╝
+test/questions_en/09_hundred_chickens.wy:47:4    |total 47 lines

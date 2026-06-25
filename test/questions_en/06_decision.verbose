@@ -1,25 +1,65 @@
 test/questions_en/06_decision.wy:1:1     |> (scope id: 0, type: SCOPE_MAIN)
-test/questions_en/06_decision.wy:1:1: 錯誤: 謬字「NOTE」
-test/questions_en/06_decision.wy:1:7: 錯誤: 謬字「[[」
-test/questions_en/06_decision.wy:2:5: 錯誤: 謬字「斯篇專試」
-/home/bun/app/wenyan-llvm/src/scope.c:336
-test/questions_en/06_decision.wy:2:9: 錯誤: 「明斷」未嘗立名，無由識之
-     1 |NOTE  [[
-       |^~~~
-     2 |    斯篇專試「明斷」之機巧。
-     2 |NOTE  [[
-       |      ^~
-     3 |    斯篇專試「明斷」之機巧。
-     2 |    斯篇專試「明斷」之機巧。
-       |    ^~~~~~~~
-     3 |    借賈島《尋隱者不遇》之尋訪層次，
-     2 |    斯篇專試「明斷」之機巧。
-       |            ^~~~~~~~
-     3 |    借賈島《尋隱者不遇》之尋訪層次，
-test/questions_en/06_decision.wy:2:9     |< (scope id: 0, type: SCOPE_MAIN)
-╔════════╦══════╦═══════╦═════════╗
-║ 名稱   ║ 型別 ║ Index ║ 術      ║
-╠════════╬══════╬═══════╬═════════╣
-║ 冪     ║ 術   ║ -1    ║ builtin ║
-║ 平方根 ║ 術   ║ -1    ║ builtin ║
-╚════════╩══════╩═══════╩═════════╝
+test/questions_en/06_decision.wy:9:40    |    PRINT: "松下問童子，欲尋隱者蹤。"
+test/questions_en/06_decision.wy:11:22   |    var 「尋訪線索」 <- 3
+test/questions_en/06_decision.wy:14:4    |    exp 「尋訪線索」 > 2 -> reg<bool>
+test/questions_en/06_decision.wy:14:15   |    > (if)
+test/questions_en/06_decision.wy:14:15   |    > (scope id: 1, type: SCOPE_IF_STMT)
+test/questions_en/06_decision.wy:15:37   |        PRINT: "想當然耳！線索俱全，必能尋得隱者。"
+test/questions_en/06_decision.wy:16:1    |    < (scope id: 1, type: SCOPE_IF_STMT)
+test/questions_en/06_decision.wy:16:1    |    > (else)
+test/questions_en/06_decision.wy:16:1    |    > (scope id: 1, type: SCOPE_IF_STMT)
+test/questions_en/06_decision.wy:17:38   |        PRINT: "怪哉！深山逢童子，竟問不出隻言片語？"
+test/questions_en/06_decision.wy:18:1    |    < (scope id: 1, type: SCOPE_IF_STMT)
+test/questions_en/06_decision.wy:18:1    |    < (if end)
+test/questions_en/06_decision.wy:21:4    |    exp 「尋訪線索」 == 1 -> reg<bool>
+test/questions_en/06_decision.wy:21:16   |    > (if)
+test/questions_en/06_decision.wy:21:16   |    > (scope id: 2, type: SCOPE_IF_STMT)
+test/questions_en/06_decision.wy:22:33   |        PRINT: "童子答曰：『言師採藥去。』"
+test/questions_en/06_decision.wy:23:9    |        exp 「尋訪線索」 == 2 -> reg<bool>
+test/questions_en/06_decision.wy:23:21   |    < (scope id: 2, type: SCOPE_IF_STMT)
+test/questions_en/06_decision.wy:23:21   |    > (else if)
+test/questions_en/06_decision.wy:23:21   |    > (scope id: 2, type: SCOPE_IF_STMT)
+test/questions_en/06_decision.wy:24:34   |        PRINT: "童子指山曰：『只在此山中。』"
+test/questions_en/06_decision.wy:25:9    |        exp 「尋訪線索」 == 3 -> reg<bool>
+test/questions_en/06_decision.wy:25:21   |    < (scope id: 2, type: SCOPE_IF_STMT)
+test/questions_en/06_decision.wy:25:21   |    > (else if)
+test/questions_en/06_decision.wy:25:21   |    > (scope id: 2, type: SCOPE_IF_STMT)
+test/questions_en/06_decision.wy:26:34   |        PRINT: "童子搖頭曰：『雲深不知處。』"
+test/questions_en/06_decision.wy:27:1    |    < (scope id: 2, type: SCOPE_IF_STMT)
+test/questions_en/06_decision.wy:27:1    |    > (else)
+test/questions_en/06_decision.wy:27:1    |    > (scope id: 2, type: SCOPE_IF_STMT)
+test/questions_en/06_decision.wy:28:30   |        PRINT: "奇了，童子竟言他物！"
+test/questions_en/06_decision.wy:29:1    |    < (scope id: 2, type: SCOPE_IF_STMT)
+test/questions_en/06_decision.wy:29:1    |    < (if end)
+test/questions_en/06_decision.wy:32:51   |    var 「雲」 <- true
+test/questions_en/06_decision.wy:32:62   |    var 「霧」 <- false
+test/questions_en/06_decision.wy:35:5    |    exp 「雲」 || 「霧」 -> reg<bool>
+test/questions_en/06_decision.wy:35:35   |    > (if)
+test/questions_en/06_decision.wy:35:35   |    > (scope id: 3, type: SCOPE_IF_STMT)
+test/questions_en/06_decision.wy:36:37   |        PRINT: "妙哉，山中尚存一絲雲霧，仙氣縹緲！"
+test/questions_en/06_decision.wy:37:1    |    < (scope id: 3, type: SCOPE_IF_STMT)
+test/questions_en/06_decision.wy:37:1    |    < (if end)
+test/questions_en/06_decision.wy:39:5    |    exp 「雲」 && 「霧」 -> reg<bool>
+test/questions_en/06_decision.wy:39:29   |    > (if)
+test/questions_en/06_decision.wy:39:29   |    > (scope id: 4, type: SCOPE_IF_STMT)
+test/questions_en/06_decision.wy:40:37   |        PRINT: "善哉，雲霧皆備，此乃神仙洞府之境！"
+test/questions_en/06_decision.wy:41:1    |    < (scope id: 4, type: SCOPE_IF_STMT)
+test/questions_en/06_decision.wy:41:1    |    < (if end)
+test/questions_en/06_decision.wy:44:25   |    set 「霧」 <- 「雲」
+test/questions_en/06_decision.wy:45:5    |    exp 「雲」 && 「霧」 -> reg<bool>
+test/questions_en/06_decision.wy:45:29   |    > (if)
+test/questions_en/06_decision.wy:45:29   |    > (scope id: 5, type: SCOPE_IF_STMT)
+test/questions_en/06_decision.wy:46:48   |        PRINT: "大善！雲遮霧掩，今皆化作漫天純白，真乃『雲深不知處』矣！"
+test/questions_en/06_decision.wy:47:1    |    < (scope id: 5, type: SCOPE_IF_STMT)
+test/questions_en/06_decision.wy:47:1    |    < (if end)
+test/questions_en/06_decision.wy:47:4    |< (scope id: 0, type: SCOPE_MAIN)
+╔══════════╦══════╦═══════╦═════════╗
+║ Name     ║ Type ║ Index ║ Func    ║
+╠══════════╬══════╬═══════╬═════════╣
+║ 冪       ║ func ║ -1    ║ builtin ║
+║ 平方根   ║ func ║ -1    ║ builtin ║
+║ 尋訪線索 ║ i32  ║ 0     ║         ║
+║ 雲       ║ bool ║ 1     ║         ║
+║ 霧       ║ bool ║ 2     ║         ║
+╚══════════╩══════╩═══════╩═════════╝
+test/questions_en/06_decision.wy:47:4    |total 47 lines

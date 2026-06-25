@@ -7,7 +7,7 @@
 #   -f <name>   filter by filename substring
 #   -s          stop on first failure
 #   -n          skip rebuild
-#   -e          English mode (questions_en + questions_advanced_en, VERBOSE_EN=ON)
+#   -e          English mode (questions_en + questions_advanced_en, EN_MODE=ON)
 #   -i          interactive diff (with pager)
 #   -h          show this help
 
@@ -43,7 +43,7 @@ YELLOW='\033[0;33m'; BOLD='\033[1m'; NC='\033[0m'
 if [[ "$NO_COMPILE" == false ]]; then
     echo -e "${CYAN}Compiling...${NC}"
     CMAKE_EXTRA_ARGS=""
-    [[ "$ENGLISH_MODE" == true ]] && CMAKE_EXTRA_ARGS="-DVERBOSE_EN=ON"
+    [[ "$ENGLISH_MODE" == true ]] && CMAKE_EXTRA_ARGS="-DEN_MODE=ON"
     if [[ ! -d "$BUILD_DIR" ]]; then
         cmake -B "$BUILD_DIR" -S "$ROOT" -DCMAKE_BUILD_TYPE=Release $CMAKE_EXTRA_ARGS \
             || { echo -e "${RED}CMake configure failed.${NC}"; exit 1; }

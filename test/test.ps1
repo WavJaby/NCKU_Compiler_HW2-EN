@@ -31,7 +31,7 @@ if (-not $BuildDir) { $BuildDir = Join-Path $Root "build" }
 # ── build ──────────────────────────────────────────────────────────────────────
 if (-not $NoCompile) {
     Write-Host "Compiling..." -ForegroundColor Cyan
-    $CmakeArgs = @("-B", $BuildDir, "-S", $Root, "-DCMAKE_BUILD_TYPE=Release", "-DVERBOSE_EN=ON")
+    $CmakeArgs = @("-B", $BuildDir, "-S", $Root, "-DCMAKE_BUILD_TYPE=Release", "-DEN_MODE=ON")
     if (-not (Test-Path $BuildDir)) {
         & cmake @CmakeArgs
         if ($LASTEXITCODE -ne 0) { Write-Host "CMake configure failed." -ForegroundColor Red; exit 1 }

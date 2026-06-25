@@ -1,25 +1,59 @@
 test/questions_en/12_function.wy:1:1     |> (scope id: 0, type: SCOPE_MAIN)
-test/questions_en/12_function.wy:1:1: 錯誤: 謬字「NOTE」
-test/questions_en/12_function.wy:1:7: 錯誤: 謬字「[[」
-test/questions_en/12_function.wy:2:5: 錯誤: 謬字「斯篇專演」
-/home/bun/app/wenyan-llvm/src/scope.c:336
-test/questions_en/12_function.wy:2:9: 錯誤: 「方術」未嘗立名，無由識之
-     1 |NOTE  [[
-       |^~~~
-     2 |    斯篇專演「方術」之奧。
-     2 |NOTE  [[
-       |      ^~
-     3 |    斯篇專演「方術」之奧。
-     2 |    斯篇專演「方術」之奧。
-       |    ^~~~~~~~
-     3 |    借泰西算學牛頓之法，以漸近求精，
-     2 |    斯篇專演「方術」之奧。
-       |            ^~~~~~~~
-     3 |    借泰西算學牛頓之法，以漸近求精，
-test/questions_en/12_function.wy:2:9     |< (scope id: 0, type: SCOPE_MAIN)
-╔════════╦══════╦═══════╦═════════╗
-║ 名稱   ║ 型別 ║ Index ║ 術      ║
-╠════════╬══════╬═══════╬═════════╣
-║ 冪     ║ 術   ║ -1    ║ builtin ║
-║ 平方根 ║ 術   ║ -1    ║ builtin ║
-╚════════╩══════╩═══════╩═════════╝
+test/questions_en/12_function.wy:7:24    |    > (function define: 牛頓求根法)
+test/questions_en/12_function.wy:7:24    |> (scope id: 0, type: SCOPE_FUNCTION)
+test/questions_en/12_function.wy:7:68    |    > (function param: 試, type: num)
+test/questions_en/12_function.wy:7:73    |    > (function start body)
+test/questions_en/12_function.wy:9:26    |    var 「甲」 <- 1
+test/questions_en/12_function.wy:10:26   |    var 「乙」 <- 1
+test/questions_en/12_function.wy:11:13   |    > (for loop, count: 「試」)
+test/questions_en/12_function.wy:11:13   |    > (scope id: 1, type: SCOPE_FOR_LOOP)
+test/questions_en/12_function.wy:13:9    |        exp 「甲」 * 「甲」 -> reg<i32>
+test/questions_en/12_function.wy:13:25   |        exp reg<i32> - 2 -> reg<i32>
+test/questions_en/12_function.wy:13:44   |        set 「乙」 <- reg<i32>
+test/questions_en/12_function.wy:15:9    |        exp 「甲」 * 2 -> reg<i32>
+test/questions_en/12_function.wy:15:31   |        var 「丙」 <- reg<i32>
+test/questions_en/12_function.wy:17:9    |        exp 「乙」 / 「丙」 -> reg<i32>
+test/questions_en/12_function.wy:17:33   |        var 「茂」 <- reg<i32>
+test/questions_en/12_function.wy:19:9    |        exp 「甲」 - 「茂」 -> reg<i32>
+test/questions_en/12_function.wy:19:30   |        set 「甲」 <- reg<i32>
+test/questions_en/12_function.wy:20:5    |    < (scope id: 1, type: SCOPE_FOR_LOOP)
+╔══════╦══════╦═══════╦══════╗
+║ Name ║ Type ║ Index ║ Func ║
+╠══════╬══════╬═══════╬══════╣
+║ 丙   ║ i32  ║ 3     ║      ║
+║ 茂   ║ i32  ║ 4     ║      ║
+╚══════╩══════╩═══════╩══════╝
+test/questions_en/12_function.wy:20:5    |    < (for loop end)
+test/questions_en/12_function.wy:21:5    |    return 「甲」
+test/questions_en/12_function.wy:22:22   |    < (function end: 牛頓求根法)
+test/questions_en/12_function.wy:22:22   |< (scope id: 0, type: SCOPE_FUNCTION)
+╔══════╦══════╦═══════╦══════╗
+║ Name ║ Type ║ Index ║ Func ║
+╠══════╬══════╬═══════╬══════╣
+║ 試   ║ i32  ║ 0     ║      ║
+║ 甲   ║ i32  ║ 1     ║      ║
+║ 乙   ║ i32  ║ 2     ║      ║
+╚══════╩══════╩═══════╩══════╝
+test/questions_en/12_function.wy:25:6    |    call 牛頓求根法(1 args) -> reg<i32>
+test/questions_en/12_function.wy:25:20   |    PRINT: reg<i32>
+test/questions_en/12_function.wy:26:6    |    call 牛頓求根法(1 args) -> reg<i32>
+test/questions_en/12_function.wy:26:20   |    PRINT: reg<i32>
+test/questions_en/12_function.wy:27:6    |    call 牛頓求根法(1 args) -> reg<i32>
+test/questions_en/12_function.wy:27:20   |    PRINT: reg<i32>
+test/questions_en/12_function.wy:28:6    |    call 牛頓求根法(1 args) -> reg<i32>
+test/questions_en/12_function.wy:28:20   |    PRINT: reg<i32>
+test/questions_en/12_function.wy:29:6    |    call 牛頓求根法(1 args) -> reg<i32>
+test/questions_en/12_function.wy:29:21   |    PRINT: reg<i32>
+test/questions_en/12_function.wy:30:6    |    call 牛頓求根法(1 args) -> reg<i32>
+test/questions_en/12_function.wy:30:22   |    PRINT: reg<i32>
+test/questions_en/12_function.wy:31:6    |    call 牛頓求根法(1 args) -> reg<i32>
+test/questions_en/12_function.wy:31:23   |    PRINT: reg<i32>
+test/questions_en/12_function.wy:31:28   |< (scope id: 0, type: SCOPE_MAIN)
+╔════════════╦══════╦═══════╦═════════╗
+║ Name       ║ Type ║ Index ║ Func    ║
+╠════════════╬══════╬═══════╬═════════╣
+║ 冪         ║ func ║ -1    ║ builtin ║
+║ 平方根     ║ func ║ -1    ║ builtin ║
+║ 牛頓求根法 ║ func ║ 0     ║ ctx:1   ║
+╚════════════╩══════╩═══════╩═════════╝
+test/questions_en/12_function.wy:31:28   |total 31 lines

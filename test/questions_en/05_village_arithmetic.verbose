@@ -1,25 +1,50 @@
 test/questions_en/05_village_arithmetic.wy:1:1     |> (scope id: 0, type: SCOPE_MAIN)
-test/questions_en/05_village_arithmetic.wy:1:1: 錯誤: 謬字「NOTE」
-test/questions_en/05_village_arithmetic.wy:1:7: 錯誤: 謬字「[[」
-test/questions_en/05_village_arithmetic.wy:2:5: 錯誤: 謬字「斯篇專演」
-/home/bun/app/wenyan-llvm/src/scope.c:336
-test/questions_en/05_village_arithmetic.wy:2:9: 錯誤: 「詩算」未嘗立名，無由識之
-     1 |NOTE  [[
-       |^~~~
-     2 |    斯篇專演「詩算」之趣。
-     2 |NOTE  [[
-       |      ^~
-     3 |    斯篇專演「詩算」之趣。
-     2 |    斯篇專演「詩算」之趣。
-       |    ^~~~~~~~
-     3 |    借宋代邵雍《山村詠懷》之數字詩，
-     2 |    斯篇專演「詩算」之趣。
-       |            ^~~~~~~~
-     3 |    借宋代邵雍《山村詠懷》之數字詩，
-test/questions_en/05_village_arithmetic.wy:2:9     |< (scope id: 0, type: SCOPE_MAIN)
+test/questions_en/05_village_arithmetic.wy:8:50    |    PRINT: "老夫今日不卜卦，且出城踏青，算算這山間野趣。"
+test/questions_en/05_village_arithmetic.wy:10:40   |    PRINT: "一去二三里，煙村四五家。"
+test/questions_en/05_village_arithmetic.wy:12:22   |    var 「去路」 <- 2
+test/questions_en/05_village_arithmetic.wy:13:1    |    exp 「去路」 + 3 -> reg<i32>
+test/questions_en/05_village_arithmetic.wy:13:21   |    set 「去路」 <- reg<i32>
+test/questions_en/05_village_arithmetic.wy:15:22   |    var 「人家」 <- 4
+test/questions_en/05_village_arithmetic.wy:16:1    |    exp 「人家」 + 5 -> reg<i32>
+test/questions_en/05_village_arithmetic.wy:16:21   |    set 「人家」 <- reg<i32>
+test/questions_en/05_village_arithmetic.wy:18:103  |    PRINT: "信步走來，行了"
+test/questions_en/05_village_arithmetic.wy:18:103  |    PRINT: 「去路」
+test/questions_en/05_village_arithmetic.wy:18:103  |    PRINT: "里路，遇見幾戶人家？想來是"
+test/questions_en/05_village_arithmetic.wy:18:103  |    PRINT: 「人家」
+test/questions_en/05_village_arithmetic.wy:18:103  |    PRINT: "戶矣。"
+test/questions_en/05_village_arithmetic.wy:20:40   |    PRINT: "亭臺六七座，八九十枝花。"
+test/questions_en/05_village_arithmetic.wy:22:22   |    var 「亭臺」 <- 6
+test/questions_en/05_village_arithmetic.wy:23:1    |    exp 「亭臺」 + 7 -> reg<i32>
+test/questions_en/05_village_arithmetic.wy:23:21   |    set 「亭臺」 <- reg<i32>
+test/questions_en/05_village_arithmetic.wy:25:22   |    var 「繁花」 <- 8
+test/questions_en/05_village_arithmetic.wy:26:1    |    exp 「繁花」 + 9 -> reg<i32>
+test/questions_en/05_village_arithmetic.wy:26:21   |    set 「繁花」 <- reg<i32>
+test/questions_en/05_village_arithmetic.wy:27:1    |    exp 「繁花」 + 10 -> reg<i32>
+test/questions_en/05_village_arithmetic.wy:27:22   |    set 「繁花」 <- reg<i32>
+test/questions_en/05_village_arithmetic.wy:29:65   |    PRINT: "歇腳之處，竟有"
+test/questions_en/05_village_arithmetic.wy:29:65   |    PRINT: 「亭臺」
+test/questions_en/05_village_arithmetic.wy:29:65   |    PRINT: "座之多。"
+test/questions_en/05_village_arithmetic.wy:30:65   |    PRINT: "路邊繁花更盛，總計"
+test/questions_en/05_village_arithmetic.wy:30:65   |    PRINT: 「繁花」
+test/questions_en/05_village_arithmetic.wy:30:65   |    PRINT: "枝！"
+test/questions_en/05_village_arithmetic.wy:33:1    |    exp 「人家」 + 「去路」 -> reg<i32>
+test/questions_en/05_village_arithmetic.wy:33:19   |    exp reg<i32> + 「亭臺」 -> reg<i32>
+test/questions_en/05_village_arithmetic.wy:33:36   |    exp reg<i32> + 「繁花」 -> reg<i32>
+test/questions_en/05_village_arithmetic.wy:33:61   |    var 「萬物」 <- reg<i32>
+test/questions_en/05_village_arithmetic.wy:36:37   |    PRINT: "老夫掐指一總，路、村、亭、花，此行共覽風物"
+test/questions_en/05_village_arithmetic.wy:36:37   |    PRINT: 「萬物」
+test/questions_en/05_village_arithmetic.wy:36:37   |    PRINT: "件。"
+test/questions_en/05_village_arithmetic.wy:36:37   |    PRINT: "想當然耳，風雅竟能稱斤論兩，妙極妙極！"
+test/questions_en/05_village_arithmetic.wy:36:42   |< (scope id: 0, type: SCOPE_MAIN)
 ╔════════╦══════╦═══════╦═════════╗
-║ 名稱   ║ 型別 ║ Index ║ 術      ║
+║ Name   ║ Type ║ Index ║ Func    ║
 ╠════════╬══════╬═══════╬═════════╣
-║ 冪     ║ 術   ║ -1    ║ builtin ║
-║ 平方根 ║ 術   ║ -1    ║ builtin ║
+║ 冪     ║ func ║ -1    ║ builtin ║
+║ 平方根 ║ func ║ -1    ║ builtin ║
+║ 去路   ║ i32  ║ 0     ║         ║
+║ 人家   ║ i32  ║ 1     ║         ║
+║ 亭臺   ║ i32  ║ 2     ║         ║
+║ 繁花   ║ i32  ║ 3     ║         ║
+║ 萬物   ║ i32  ║ 4     ║         ║
 ╚════════╩══════╩═══════╩═════════╝
+test/questions_en/05_village_arithmetic.wy:36:42   |total 36 lines
