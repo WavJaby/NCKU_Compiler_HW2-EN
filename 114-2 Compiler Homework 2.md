@@ -391,7 +391,7 @@ Don't be intimidated by the length of the assignment description and the number 
 > Use `-f <test-name>` to run a single test
 >
 > **Local grading**: `./test/test.sh`
-> **Server grading**: `submit_test_hw2`
+> **Server grading**: `submit_test_hw2 -e`
 
 > [!WARNING]
 > Final score = min(server score, 100)
@@ -546,7 +546,7 @@ chmod +x ./test/test.sh
 Then run:
 
 ```bash
-submit_test_hw2
+submit_test_hw2 -e
 ```
 
 This shows your test results. By default it stops on the first error, rebuilds each time, and ignores the `-n` and `-i` flags.
