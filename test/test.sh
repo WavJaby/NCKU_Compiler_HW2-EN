@@ -80,7 +80,7 @@ show_diff() {
 # points are awarded proportionally to the fraction of matching lines, so a
 # single mismatched line costs a fraction of a point instead of the whole test.
 strip_column() {
-    sed -E 's/^([^:]+:[0-9]+):[0-9]+/\1:*/'
+    sed -E 's/^([^:]+:[0-9]+):[0-9]+[[:space:]]*/\1:* /'
 }
 
 # echoes a ratio in [0,1]: fraction of lines that match after column-stripping
